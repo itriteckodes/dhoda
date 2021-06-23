@@ -68,13 +68,14 @@ class OrderController extends Controller
                  }
                  Session::forget('cart');
                 //   $order->email = 'siddiqueakbar560@gmail.com';
-                    $data = ['code' => $order->order_code];
-                    Mail::send('front.mail', $data, function ($message) use ($order){
-                        $message->from('admin@mail.com','Admin');
-                        $message->to($order->email, 'Fixer')
-                        ->subject('Order tracking code');
-                    }); 
-                toastr()->success('Please check your email for code to track your order');
+                    // $data = ['code' => $order->order_code];
+                    // Mail::send('front.mail', $data, function ($message) use ($order){
+                    //     $message->from('admin@mail.com','Admin');
+                    //     $message->to($order->email, 'Fixer')
+                    //     ->subject('Order tracking code');
+                    // }); 
+                // toastr()->success('Please check your email for code to track your order');
+                toastr()->success('Order Placed Successfully');
                 return redirect('/');
     }
 
