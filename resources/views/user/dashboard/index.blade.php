@@ -8,7 +8,7 @@
 <div class="row">
     
     <div class="col-sm-4 col-xl-4">
-        <a href="{{route('user.course.index')}}">
+        <a href="{{route('user.order.index')}}">
             <div class="card card-body bg-blue-400 has-bg-image">
                 <div class="media">
                     <div class="media-body">
@@ -20,7 +20,7 @@
         </a>
     </div>
     <div class="col-sm-4 col-xl-4">
-        <a href="{{route('user.course.purchased')}}">
+        <a href="{{route('user.pending.order')}}">
             <div class="card card-body bg-danger-400 has-bg-image">
                 <div class="media">
                     <div class="media-body">
@@ -32,7 +32,7 @@
         </a>
     </div>
     <div class="col-sm-4 col-xl-4">
-        <a href="{{route('user.chat.index')}}">
+        <a href="{{route('user.completed.order')}}">
             <div class="card card-body bg-success-400 has-bg-image">
                 <div class="media">
                     <div class="media-body">
