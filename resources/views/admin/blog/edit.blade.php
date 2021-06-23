@@ -46,12 +46,11 @@
                         </select>
                     </div>         
                     @foreach ($blog->tags as $tag)
-    
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Tags</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="email" name="tag[]" value="{{$tag->tag}}" placeholder="Enter Tags" required>
-                          <input type="hidden" class="form-control" id="email" name="id[]" value="{{$tag->id}}" placeholder="Enter Tags">
+                          <input type="hidden" class="form-control" id="email" name="ids[]" value="{{$tag->id}}" placeholder="Enter Tags">
                         </div>
                         
                       </div>

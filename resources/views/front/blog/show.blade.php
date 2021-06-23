@@ -75,23 +75,10 @@
                                 <ul>
                                     <li>
                                         <span>20 April 2020</span>
-                                        <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
+                                        <h4><a href="#">Strawberries are low-growing herbaceous plants.</a></h4>
                                     </li>
 
-                                    <li>
-                                        <span>20 April 2020</span>
-                                        <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                    </li>
-
-                                    <li>
-                                        <span>20 April 2020</span>
-                                        <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                    </li>
-
-                                    <li>
-                                        <span>20 April 2020</span>
-                                        <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                    </li>
+                        
                                 </ul>
                             </div>
                         </div>
@@ -140,7 +127,7 @@
                                 <div class="blog_title">
 
                                     <h4><a href="blogdetails.html">{{$blog->title}}</a></h4>
-                                    <p>{!! substr( $blog->description, 0, 230) !!}</p>
+                                    <p>{!! $blog->description !!}</p>
                                 </div>
                                 <div class="blog_details">
                                     <div class="details_img mt-3 mb-3">

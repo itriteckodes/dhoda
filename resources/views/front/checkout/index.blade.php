@@ -68,7 +68,7 @@
                                     <label class="form-check-label" for="credit_card">Cash On Delivery</label>
                                 </div>
                                 <div class="chechout_btn text-left">
-                                    <button type="submit" class="btn border-radius-0 border-transparent">Checkout</button>
+                                    <button type="submit" class="btn border-radius-0 border-transparent">Order Now</button>
                                 </div>
                             </form>
                         </div>

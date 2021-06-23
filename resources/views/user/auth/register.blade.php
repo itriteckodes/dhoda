@@ -66,7 +66,7 @@
                                     </div>
 
                                     <div class="col-md-12  mt-3">
-                                        <input type="file" class="form-control border-radius-0" id="checkout_postalcode" name="image" />
+                                        <input type="file" class="form-control border-radius-0" id="checkout_postalcode" name="image" accept="image/*"/>
                                     </div>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">

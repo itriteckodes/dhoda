@@ -32,7 +32,7 @@ Create Product
                         <div class="col-md-5">
                             <div class="form-group ">
                                 <img id="preview_img" src="{{asset('images/blog/721606330121.jpg')}}" height="240" width="320" style="padding-bottom: 10px;" alt="">
-                                <input type="file" value="{{old('image')}}"  name="image" id="profile_image" onchange="loadPreview(this);" class="form-input-styled" >
+                                <input type="file" value="{{old('image')}}"  name="image" id="profile_image" onchange="loadPreview(this);" class="form-input-styled" accept="image/*" required >
                                 </div>
                             </div>
                         <div class="col-md-7">
@@ -61,7 +61,7 @@ Create Product
                     </div>
                     <div class="form-group col-md-12">
                         <label>Description</label>
-                        <textarea class="form-control summernote"  id="description" name="detail" required>{{old('description')}} </textarea>
+                        <textarea class="form-control summernote" name="detail"  required>{{old('description')}} </textarea>
                     </div>
                     <div class="text-right">
                         <button type="submit" class="btn btn-primary">Create 

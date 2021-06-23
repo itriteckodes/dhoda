@@ -177,7 +177,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-12">
 					<div class="footer_txt text-center">
-						<p><span>Ameen Dhoda House</span>. All Right Reserved</p>
+						<p><span>Ameen Dhoda House 2021</span> All Right Reserved</p>
 					</div>
 				</div>
 			</div>
@@ -308,7 +308,7 @@
 		$(".product-slider").slick({
 		  // normal options...
 		  infinite: false,
-		  slidesToShow: 5,
+		  slidesToShow: 4,
 		  slidesToScroll: 2,
 		  autoplay: true,
 		  autoplaySpeed: 2000,
@@ -328,7 +328,7 @@
 
 		  	breakpoint: 600,
 		  	settings: {
-		  		slidesToShow: 2,
+		  		slidesToShow: 1,
 		  		dots: true
 		  	}
 

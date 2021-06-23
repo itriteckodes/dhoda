@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    color: #03262c;
+    color: #fb9943;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -240,7 +240,7 @@ button:hover {
 }
 
 .navbar-brand {
-    padding-top: 5px;
+    padding-top: 0;
     padding-bottom: 0;
     margin-right: 0rem;
     width: 75px;
@@ -401,7 +401,7 @@ button:hover {
     color: #fff;
     font-size: 55px;
     font-weight: 600;
-    background-color: #03262c;
+    background-color: #fb9943;
     display: inline-block;
     padding-left: 20px;
     padding-right: 20px;
@@ -1229,7 +1229,7 @@ button:hover {
 .card_total,
 .payment_head {
     border: none;
-    background-color: #03262c;
+    background-color: #a6302f;
     font-size: 18px;
     color: #fff;
     width: 100%;

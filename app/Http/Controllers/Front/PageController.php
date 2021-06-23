@@ -125,7 +125,7 @@ class PageController extends Controller
     }
 
     public function searchBlog(Request $request){
-        $blogs = Blog::where('title','LIKE','%'.$request->keyword.'%')->get();
+        $blogs = Blog::where('title','LIKE','%'.$request->keyword.'%')->orWhere('name','LIKE','%'.$request->keyword.'%')->orWhere('description','LIKE','%'.$request->keyword.'%')->get();
         $information = Information::find(1);
         return view('front.blog.search')->with('blogs',$blogs)->with('information',$information)->with('Keyword',$request->keyword);
     }

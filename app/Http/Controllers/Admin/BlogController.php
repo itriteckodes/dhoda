@@ -91,13 +91,14 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $blog->update($request->all());
-        foreach($request->id as $key => $id){
-
-        $tag = Tag::find($id);
-
-            $tag->update([
-                'tag' => $request->tag[$key]
-            ]);
+        if($request->has('ids')){
+            foreach($request->ids as $key => $id){
+                $tag = Tag::find($id);
+    
+                    $tag->update([
+                        'tag' => $request->tag[$key]
+                    ]);
+                }
         }
         toastr()->success('Blog Informations Updated successfully');
         return redirect()->back();    

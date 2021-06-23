@@ -30,7 +30,7 @@
                         </div>
                           <div class="form-group col-md-12">
                             <label>Category Image</label>
-                            <input name="image" type="file" class="form-input-styled" placeholder="Enter Category Name" required>
+                            <input name="image" type="file" class="form-input-styled" placeholder="Enter Category Name" accept="image/*" required>
                         </div>
                     </div>
                     <div class="text-right">

@@ -43,7 +43,7 @@
                         </div>  
                         <div class="form-group col-md-6">
                             <label for="image">Image</label>
-                            <input type="file" class="form-control" name="image">
+                            <input type="file" class="form-control" name="image" accept="image/*">
                         </div>
                     </div>
                     <div class="text-right">

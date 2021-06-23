@@ -75,22 +75,7 @@
                             <ul>
                                 <li>
                                     <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
+                                    <h4><a href="#">Strawberries are low-growing herbaceous plants.</a></h4>
                                 </li>
                             </ul>
                         </div>

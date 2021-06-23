@@ -62,22 +62,7 @@
                             <ul>
                                 <li>
                                     <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
-
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="blogdetails.html">Strawberries are low-growing herbaceous plants.</a></h4>
+                                    <h4><a href="#">Strawberries are low-growing herbaceous plants.</a></h4>
                                 </li>
                             </ul>
                         </div>
@@ -91,7 +76,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
                         <div class="blog">
                             <div class="blog_img">
-                                <img src="{{asset('front/img/blog1.jpg')}}" class="w-100 img-fluid" alt="jpgimg" />
+                                <img src="{{asset($blog->image)}}" class="w-100 img-fluid" alt="jpgimg" />
                             </div>
                             <div class="blog_publish d-flex justify-content-between pt-4">
                                 <div class="date">
@@ -104,7 +89,7 @@
                             </div>
                             <div class="blog_title text-uppercase">
                                 <h4><a href="{{route('blog.show',str_replace(' ', '_',$blog->title))}}">{{$blog->title}}.</a></h4>
-                                <p>{!! substr( $blog->description, 0, 230) !!}</p>
+                                <p>{!!$blog->description !!}</p>
                                 <a href="{{route('blog.show',str_replace(' ', '_',$blog->title))}}" class="underline">Read More</a>
                             </div>
                         </div>

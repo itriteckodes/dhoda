@@ -42,7 +42,7 @@
                     </div>  
                     <div class="form-group">
                         <label>Enter Product Image</label>
-                        <input name="image" multiple type="file" class="form-input-styled" data-fouc>
+                        <input name="image" multiple type="file" class="form-input-styled" data-fouc accept="image/*">
                     </div>                                         
                     <div class="form-group">
                         <label>Select Product Category</label>
