@@ -37,7 +37,7 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number" />
+                                        <input type="number" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number" />
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
@@ -57,7 +57,7 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_postalcode" name="postal_code"  placeholder="Zip/Postal Code" />
+                                        <input type="number" class="form-control border-radius-0" id="checkout_postalcode" name="postal_code"  placeholder="Zip/Postal Code" />
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                                         <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="10" placeholder="Note Of Order :"></textarea>
