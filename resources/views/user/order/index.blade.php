@@ -36,7 +36,7 @@
                 @endif
                 @if ($order->status=='completed')
                 <td>
-                    <p><span class="badge badge-success">Approved</span> </p>
+                    <p><span class="badge badge-success">Complete</span> </p>
                 </td>
                 @endif
                 <td><a href="{{ route('user.order.show',$order->id) }}" class="btn btn-primary">Show</a></td>
