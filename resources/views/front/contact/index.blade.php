@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">
-                                    <button type="submit" class="btn border-radius-0 border-transparent">Register</button>
+                                    <button type="submit" class="btn border-radius-0 border-transparent">Submit</button>
                                 </div>
                             </form>
                         </div>
