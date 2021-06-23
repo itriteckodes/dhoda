@@ -34,14 +34,9 @@
                     <p><span class="badge badge-warning">Pending</span></p>
                 </td>
                 @endif
-                @if ($order->status=='approved')
+                @if ($order->status=='completed')
                 <td>
                     <p><span class="badge badge-success">Approved</span> </p>
-                </td>
-                @endif
-                @if ($order->status=='rejected')
-                <td>
-                    <p><span class="badge badge-danger">Rejected</span></p>
                 </td>
                 @endif
                 <td><a href="{{ route('user.order.show',$order->id) }}" class="btn btn-primary">Show</a></td>
