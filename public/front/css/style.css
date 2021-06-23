@@ -234,7 +234,7 @@ button:hover {
 .navbar {
     background: url(../img/header-bg.png);
     background-repeat: no-repeat;
-    /* background-position: center; */
+    background-position: center;
     background-size: cover;
     padding: 10px 50px;
 }
