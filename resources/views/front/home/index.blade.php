@@ -204,7 +204,7 @@
         </div>
 
         <div class="row mt-5">
-            @foreach(App\Models\Product::all()->take(10) as $product)
+            @foreach(App\Models\Product::all()->take(12) as $product)
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="product">
                         <div class="product-img">
