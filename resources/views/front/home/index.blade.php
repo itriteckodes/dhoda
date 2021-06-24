@@ -231,6 +231,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="container text-center ">
+                <a href="{{route('product.index')}}" class="btn">Show More <i class="icofont-bubble-right"></i></a>
+            </div>
         </div>
     </div>
 </div>
