@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="herosection_content">
-                    <h2>Chackout</h2>
+                    <h2 class="text-light">Chackout</h2>
                     <a href="{{url('/')}}" class="btn border-radius-0 border-transparent">Home</a>
                 </div>
             </div>

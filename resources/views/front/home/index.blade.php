@@ -199,8 +199,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="section-title">Our Best Seller Product</h3>
-                <p class="section-subtitle">The passage experienced a surge in popularity during the 1960s when again
-                    during the 90s as desktop publishers</p>
+                <p class="section-subtitle">We here at Amin Dhodha provide best and the most delicious sweets from all categories in their pure and original taste</p>
             </div>
         </div>
 
@@ -246,8 +245,8 @@
             <div class="col-md-6">
                 <div class="offer-content">
                     <h3>Daily Essentials</h3>
-                    <h2>Sale 68% Off <br> All Fruite Products</h2>
-                    <a href="#" class="btn">Explore more <i class="icofont-bubble-right"></i></a>
+                    <h2>Sale 25% Off <br> All Sweet Products</h2>
+                    <a href="{{route('product.index')}}" class="btn">Explore more <i class="icofont-bubble-right"></i></a>
                 </div>
             </div>
         </div>
@@ -311,8 +310,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="section-title">Our Happy Customers</h3>
-                <p class="section-subtitle">The passage experienced a surge in popularity during the 1960s when again
-                    during the 90s as desktop publishers</p>
+                <p class="section-subtitle">Here we deal with customers to make them happy with our services and quality of food. Customer satifaction is more important for us</p>
             </div>
         </div>
 

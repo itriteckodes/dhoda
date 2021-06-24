@@ -15,7 +15,7 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-12">
-              <h2>BLOG CATEGORIES</h2>
+              <h2 class="text-light">BLOG CATEGORIES</h2>
               <div class="breadcrumb-link margin-top-10">
                   <span><a href="{{url('/')}}">Home</a> / Blog Categories</span>
               </div>
