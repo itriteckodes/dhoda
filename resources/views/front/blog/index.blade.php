@@ -9,6 +9,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 @endsection
 @section('body')
+<style>
+    ::placeholder {
+    font-size:18px;
+}
+</style>
  <!-- HERO SECTION PART START -->
  <div class="hero_section">
     <div class="png_img"></div>
@@ -33,11 +38,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="allpost_content">
                             <div class="serach_btn">
-                                <form action="{{route('search.blog')}}" method="POST">
+                                <form action="{{route('search.blog')}}" method="post" id="searcForm">
                                     <div class="search_ber">
-                                        <input type="text" class="form-control search_button" id="serach_button" name="keyword" value="" placeholder="Type something and press enter to search" />
-                                        <i class="icofont-search-1"></i>
+                                        <input type="text" class="form-control search_button" id="serach_button" name="keyword"  placeholder="Type something and press enter to search" required />
+                                        <i class="icofont-search-1 search"></i>
                                     </div>
+                                    <span class="text-danger error">Please Enter Something</span>
                                 </form>
                             </div>
                             <div class="post_category">
@@ -60,10 +66,12 @@
                                 <h4>Recent Post</h4>
                             </div>
                             <ul>
+                                @foreach (App\Models\Blog::orderBy('id', 'DESC')->take(5)->get() as $bloge)
                                 <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="#">Strawberries are low-growing herbaceous plants.</a></h4>
+                                    <span>{{Carbon\Carbon::parse($bloge->created_at)->format('d M,Y')}}</span>
+                                    <h4><a href="{{route('blog.show',str_replace(' ', '_',$bloge->title))}}">{{$bloge->title}}</a></h4>
                                 </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -89,7 +97,7 @@
                             </div>
                             <div class="blog_title text-uppercase">
                                 <h4><a href="{{route('blog.show',str_replace(' ', '_',$blog->title))}}">{{$blog->title}}.</a></h4>
-                                <p>{!!$blog->description !!}</p>
+                                <p>{!! substr( $blog->description, 0, 230) !!}</p>
                                 <a href="{{route('blog.show',str_replace(' ', '_',$blog->title))}}" class="underline">Read More</a>
                             </div>
                         </div>
@@ -115,4 +123,20 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+           $('.error').hide();
+            $('.search').on('click',function(){
+                let key = $('#serach_button').val();
+                if(key==''){
+                    $('.error').show();
+                }else{
+                    $('#searcForm').submit();
+                    $('.error').hide();
+                }
+            });
+        });
+    </script>
 @endsection

@@ -322,38 +322,38 @@
                     </div>
 
                     <div class="img">
-                        <img class="w-100" src="{{ asset('front/img/testimonial-1.png') }}" alt="">
+                        <img class="w-100" src="{{ asset('front/img/testimonial-2.png') }}" alt="">
                     </div>
 
                     <div class="img">
-                        <img class="w-100" src="{{ asset('front/img/testimonial-1.png') }}" alt="">
+                        <img class="w-100" src="{{ asset('front/img/testimonial-3.png') }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="testimonial-text">
                     <div class="testimonial-info">
-                        <p>“ There are many variati ons passages of but the majority have suffered alteration in some
-                            form, injected humour randomised words which don't look even slightly believable. If you are
-                            going to use a passage of text all the loss.</p>
-                        <h3>Salvador Stanley</h3>
-                        <h4>Happy Customer</h4>
+                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                             Everyone is making their own version of Dhodha using substandard ingredients.
+                              People have complained about the healthy measures..</p>
+                        <h3>Mr. Furqan</h3>
+                        <h4>Customer</h4>
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ There are many variati ons passages of but the majority have suffered alteration in some
-                            form, injected humour randomised words which don't look even slightly believable. If you are
-                            going to use a passage of text all the loss.</p>
-                        <h3>Salvador Stanley</h3>
-                        <h4>Happy Customer</h4>
+                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                             Everyone is making their own version of Dhodha using substandard ingredients.
+                             People have complained about the healthy measures.</p>
+                        <h3>Mr. Hussain</h3>
+                        <h4>Customer</h4>
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ There are many variati ons passages of but the majority have suffered alteration in some
-                            form, injected humour randomised words which don't look even slightly believable. If you are
-                            going to use a passage of text all the loss.</p>
-                        <h3>Salvador Stanley</h3>
-                        <h4>Happy Customer</h4>
+                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                             Everyone is making their own version of Dhodha using substandard ingredients.
+                             People have complained about the healthy measures.</p>
+                        <h3>Mr. Ali</h3>
+                        <h4>Customer</h4>
                     </div>
                 </div>
             </div>
@@ -400,7 +400,7 @@
                                 <span class="react"><i class="icofont-speech-comments"></i>{{$blog->comments->count()}}</span>
                             </div>
                             <div class="news-title">
-                                <a href="blogdetails.html">
+                                <a href="{{route('blog.show',str_replace(' ', '_',$blog->title))}}">
                                     <h4>{{$blog->title}}</h4>
                                 </a>
                             </div>

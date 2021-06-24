@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>{{$Keyword}}</title>
+<title>{{$Keyword??$tag->tag}}</title>
 @foreach (App\Models\Information::all()->take(1) as $information)     
 
 <meta name="description" content="{!! $information->bdescription !!}" />
@@ -21,7 +21,11 @@
 @section('body')
 <!-- CONTENT -->
 <!-- CONTENT -->
-
+<style>
+    ::placeholder {
+    font-size:18px;
+}
+</style>
  <!-- HERO SECTION PART START -->
  <div class="hero_section">
     <div class="png_img"></div>
@@ -46,11 +50,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="allpost_content">
                             <div class="serach_btn">
-                                <form action="{{route('search.blog')}}" method="POST">
+                                <form action="{{route('search.blog')}}" method="post" id="searcForm">
                                     <div class="search_ber">
-                                        <input type="text" class="form-control search_button" id="serach_button" name="keyword" value="" placeholder="Type something and press enter to search" />
-                                        <i class="icofont-search-1"></i>
+                                        <input type="text" class="form-control search_button" id="serach_button" name="keyword"  placeholder="Type something and press enter to search" required />
+                                        <i class="icofont-search-1 search"></i>
                                     </div>
+                                    <span class="text-danger error">Please Enter Something</span>
                                 </form>
                             </div>
                             <div class="post_category">
@@ -73,14 +78,32 @@
                                 <h4>Recent Post</h4>
                             </div>
                             <ul>
-                                <li>
-                                    <span>20 April 2020</span>
-                                    <h4><a href="#">Strawberries are low-growing herbaceous plants.</a></h4>
-                                </li>
+                                @foreach (App\Models\Blog::orderBy('id', 'DESC')->take(5)->get() as $bloge)
+                                    <li>
+                                        <span>{{Carbon\Carbon::parse($bloge->created_at)->format('d M,Y')}}</span>
+                                        <h4><a href="{{route('blog.show',str_replace(' ', '_',$bloge->title))}}">{{$bloge->title}}</a></h4>
+                                    </li>
+                                    @endforeach
                             </ul>
                         </div>
                     </div>
                 </div>
+                {{-- <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="populer_tag">
+                            <div class="sidebar">
+                                <h4 class="border-0">Populer Tag</h4>
+                            </div>
+                            <div class="populer_btn">
+                                <ul>
+                                    @foreach (App\Models\Tag::all() as $tag)
+                                    <li><a href="{{route('tag.show',$tag->id)}}" class="text-dark">{{$tag->tag}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
@@ -89,7 +112,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
                         <div class="blog">
                             <div class="blog_img">
-                                <img src="{{asset('front/img/blog1.jpg')}}" class="w-100 img-fluid" alt="jpgimg" />
+                                <img src="{{asset($blog->image)}}" class="w-100 img-fluid" alt="jpgimg" />
                             </div>
                             <div class="blog_publish d-flex justify-content-between pt-4">
                                 <div class="date">
@@ -128,4 +151,20 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+           $('.error').hide();
+            $('.search').on('click',function(){
+                let key = $('#serach_button').val();
+                if(key==''){
+                    $('.error').show();
+                }else{
+                    $('#searcForm').submit();
+                    $('.error').hide();
+                }
+            });
+        });
+    </script>
 @endsection

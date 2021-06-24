@@ -125,6 +125,8 @@ Route::get('login', 'Front\PageController@login')->name('auth.login');
 Route::get('sign_up', 'Front\PageController@register')->name('auth.register');
 Route::get('checkout','Front\PageController@checkout')->name('checkout');
 
+Route::get('tag/{id}/blogs','Front\PageController@shwTagNext')->name('tag.show');
+
 Route::post('order/tracking','Front\OrderController@trackOrder')->name('order.tracking');
 Route::resource('order','Front\OrderController');
 Route::resource('comment','Front\CommentController');

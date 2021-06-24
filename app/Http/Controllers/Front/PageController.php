@@ -12,6 +12,7 @@ use App\Models\Information;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -128,5 +129,14 @@ class PageController extends Controller
         $blogs = Blog::where('title','LIKE','%'.$request->keyword.'%')->orWhere('name','LIKE','%'.$request->keyword.'%')->orWhere('description','LIKE','%'.$request->keyword.'%')->get();
         $information = Information::find(1);
         return view('front.blog.search')->with('blogs',$blogs)->with('information',$information)->with('Keyword',$request->keyword);
+    }
+
+    public function shwTagNext($id)
+    {
+        $tag=Tag::where('id',$id)->first();
+
+        $blogs=Blog::where('id',$tag->blog_id)->paginate(9);
+        $information = Information::find(1);
+        return view('front.blog.search',compact('tag','blogs','information'));
     }
 }
