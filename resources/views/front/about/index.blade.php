@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6">
                 <div class="about-content">
-                    <h3>We Providing Services Since 1935 With Proud.</h3>
+                    <h3>We are Providing Services Since 1935 With Proud.</h3>
                     <div class="about-details">
                         <p>{!! $information->about !!}</p>
                         

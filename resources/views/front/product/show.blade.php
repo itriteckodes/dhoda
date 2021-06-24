@@ -57,9 +57,9 @@
                             productId="{{ $product->id }}"><i class="icofont-arrow-up"></i></button>
                     </div>
                 </div> --}}
-                <a href="cartoverview.html" class="btn border-transparent ml-5 cart-add" id="{{$product->id}}">Add to
+                <a href="#" class="btn border-transparent cart-add" id="{{$product->id}}">Add to
                     cart</a>
-                <a href="cartoverview.html" class="btn border-transparent ml-5 checkout" id="{{$product->id}}">Checkout
+                <a href="#" class="btn border-transparent ml-5 checkout" id="{{$product->id}}">Checkout
                     Now</a>
             </div>
         </div>

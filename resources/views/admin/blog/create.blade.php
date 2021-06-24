@@ -31,7 +31,7 @@ Create Blog
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group ">
-                                <img id="preview_img" src="{{asset('blog/721606330121.jpg')}}" height="240" width="auto" style="padding-bottom: 10px;" alt="">
+                                <img id="preview_img" src="{{asset('images/blog/721606330121.jpg')}}" height="240" width="auto" style="padding-bottom: 10px;" alt="">
                                 <input type="file" value="{{old('image')}}"  name="image" id="profile_image" onchange="loadPreview(this);" class="form-input-styled"  required>
                                 </div>
                         </div>

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="herosection_content">
-                    <h2 class="text-light">Chackout</h2>
+                    <h2 class="text-light">Checkout</h2>
                     <a href="{{url('/')}}" class="btn border-radius-0 border-transparent">Home</a>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                 <div class="order_content">
                     <div class="order_txt">
-                        <h2>Your Order</h2>
+                        <h2 class="mt-5 text-center">Your Order</h2>
                     </div>
                     <div class="order_cardTotal pt-4">
                         <table class="table">
