@@ -82,7 +82,7 @@ class AuthController extends Controller
     private function sendMail($user){
         // $user->email = 'siddiqueakbar560@gmail.com';
         $data = ['code' => $user->code];
-        Mail::send('mail', $data, function ($message) use ($user){
+        Mail::send('user.mail', $data, function ($message) use ($user){
             $message->from('CoCook@support.com', 'CoCook');
             $message->to($user->email, $user->name)
             ->subject('Reset Password');

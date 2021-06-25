@@ -62,7 +62,7 @@
                                     </div> --}}
 
                                     <div class="col-md-12  mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address:" />
+                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address:" required />
                                     </div>
 
                                     <div class="col-md-12  mt-3">

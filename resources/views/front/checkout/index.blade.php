@@ -37,23 +37,23 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="number" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number" />
+                                        <input type="number" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number" required />
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_country" name="country"  placeholder="Country" />
+                                        <input type="text" class="form-control border-radius-0" id="checkout_country" name="country"  placeholder="Country" required />
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_state" name="district"  placeholder="State/Disctrict" />
+                                        <input type="text" class="form-control border-radius-0" id="checkout_state" name="district"  placeholder="State/Disctrict" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="city" placeholder="City:" />
+                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="city" placeholder="City:" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address:" />
+                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address:" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">

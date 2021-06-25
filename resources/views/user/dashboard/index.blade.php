@@ -10,7 +10,7 @@
             <div class="card card-body bg-blue-400 has-bg-image">
                 <div class="media">
                     <div class="media-body">
-                        <h3 class="mb-0">{{count(App\Models\Order::all())}}</h3>
+                        <h3 class="mb-0">{{count(App\Models\Order::where('user_id',Auth::user()))}}</h3>
                         <span class="text-uppercase font-size-xs">Total Orders</span>
                     </div>
                 </div>

@@ -27,9 +27,9 @@ class CreateOrdersTable extends Migration
             $table->double('amount');
             $table->integer('qty');
             $table->bigInteger('order_code')->unique();
-            $table->bigInteger('postal_code');
+            $table->bigInteger('postal_code')->nullable();
             $table->string('status')->default('pending');
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }
