@@ -34,14 +34,17 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="product_img d-flex">
                         <div class="small_img">
+                            <a href="#">
                             <img class="w-100 smallImage" src="{{ asset($product->image) }}" alt="">
+                            </a>
                             @foreach ($product->images as $ProductImage)
+                            <a href="#">
                              <img class="w-100 smallImage" src="{{ asset($ProductImage->image) }}" alt="">
-                            @endforeach
-                            
+                            </a>
+                             @endforeach
                         </div>
                         <div class="big_img">
-                            <img src="{{ asset($product->image) }}" class="w-100 img-fluid largeImage" alt="" />
+                           <a href="{{ asset($product->image) }}"><img src="{{ asset($product->image) }}" class="w-100 img-fluid largeImage" alt="" /></a> 
                         </div>
                     </div>
                 </div>
@@ -66,7 +69,7 @@
                 </div> --}}
                             <a href="#" class="btn border-transparent cart-add" id="{{ $product->id }}">Add to
                                 cart</a>
-                            <a href="#" class="btn border-transparent ml-5 checkout" id="{{ $product->id }}">Checkout
+                            <a href="#" class="btn border-transparent ml-5 checkout" id="{{ $product->id }}">Buy
                                 Now</a>
                         </div>
                     </div>
@@ -263,7 +266,8 @@
                     }
                 });
             });
-            $('.smallImage').on('click',function(){
+            $('.smallImage').on('click',function(e){
+                e.preventDefault();
                 let smallsrc = $(this).attr('src');
                 let largesrc = $('.largeImage').attr('src');
                 $('.largeImage').attr('src',smallsrc);
