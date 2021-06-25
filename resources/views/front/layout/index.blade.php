@@ -61,11 +61,12 @@
 								<a class="nav-link" href="{{route('contact.index')}}">Contact</a>
 							</li>
 							
+							@if(Auth::guard('user')->user()!=null)
+							<li><a href="{{ route('user.dashboard.index') }}" class="nav-link">Dashboard</a></li>
+							@else
 							<li class="nav-item">
 								<a class="nav-link" href="{{route('auth.login')}}">Login/Register</a>
 							</li>
-							@if(Auth::guard('user')->user()!=null)
-							<li><a href="{{ route('user.dashboard.index') }}" class="nav-link">Dashboard</a></li>
 							@endif
 							@if(Auth::guard('admin')->user()!=null)
 							<li><a href="{{ route('admin.dashboard.index') }}" class="nav-link">Dashboard</a></li>
@@ -126,10 +127,10 @@
 
 						<div class="footer_social">
 							<ul class="footer_social_icons">
-								<li><a href="#"><i class="icofont-skype"></i></a></li>
-								<li><a href="#"><i class="icofont-facebook"></i></a></li>
-								<li><a href="#"><i class="icofont-twitter"></i></a></li>
-								<li><a href="#"><i class="icofont-whatsapp"></i></a></li>
+								<li><a href="{{$information->pt}}"><i class="icofont-linkedin"></i></a></li>
+								<li><a href="{{$information->fb}}"><i class="icofont-facebook"></i></a></li>
+								<li><a href="{{$information->twitter}}"><i class="icofont-twitter"></i></a></li>
+								<li><a href="{{$information->insta}}"><i class="icofont-instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>

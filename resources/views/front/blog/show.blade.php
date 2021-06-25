@@ -128,7 +128,7 @@
                                     <p>{!! $blog->description !!}</p>
                                 </div>
                                 <div class="blog_details">
-                                    <div class="details_img mt-3 mb-3">
+                                    {{-- <div class="details_img mt-3 mb-3">
                                         <div class="row">
                                             <div class="col-xs-4 col-sm-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                                 <img src="img/blogdetails1.jpg" class="w-100 img-fluid" alt="" />
@@ -142,14 +142,14 @@
                                                 <img src="img/blogdetails3.jpg" class="w-100 img-fluid" alt="" />
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     
-                                    <div class="details_comment mt-4">
+                                    <div class="details_comment mt-5">
                                         <strong>Comment</strong>
                                         @foreach ($blog->comments as $comment)
-                                        <div class="customer d-flex mt-3">
-                                            <div class="customer_img mt-2"><img src="{{asset($comment->image)}}" class="w-100 img-fluid" alt=""  /></div>
-                                            <div class="customer_info ">
+                                        <div class="row mt-3">
+                                            <div class="col-md-2 mt-2"><img src="{{asset($comment->image)}}" alt="" style="height: 100px; width:100px;"/></div>
+                                            <div class="col-md-9 ">
                                                 <strong>{{$comment->name}} <br /></strong>
                                                 <span>{{Carbon\Carbon::parse($comment->created_at)->format('d M,Y')}}</span>
                                                 <p>
