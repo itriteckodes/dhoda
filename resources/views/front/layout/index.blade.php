@@ -31,7 +31,7 @@
 		<div class="header">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg navbar-light">
-					<a class="navbar-brand my-auto" href="{{url('/')}}" style="color: #F69743; font-family: 'Poppins', 'Sans-serif';font-size:14px">
+					<a class="navbar-brand my-auto" href="{{url('/')}}" style="color: #F69743; font-family: 'Poppins', 'Sans-serif';font-size:18px; font-weight: bold; font-style: italic">
 						{{-- <img src="{{ asset('front/img/logo.png') }}" alt=""> --}}
 						Ameen Dhodha House
 					</a>
