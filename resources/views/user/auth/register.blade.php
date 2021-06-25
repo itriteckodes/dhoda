@@ -72,6 +72,7 @@
                                 <div class="chechout_btn text-left mt-3">
                                     <button type="submit" class="btn border-radius-0 border-transparent">Register</button>
                                 </div>
+                                <a href="{{route('auth.login')}}" >Already have  an account</a>
                             </form>
                         </div>
                     </div>
