@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-    <title>User Login  - Ameen Dhoda House</title>
+    <title>User Reset Password  - Ameen Dhoda House</title>
     <meta name="description" content="">
 
     <!--Keywords -->
