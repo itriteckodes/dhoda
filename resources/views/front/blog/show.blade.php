@@ -149,7 +149,7 @@
                                         @foreach ($blog->comments as $comment)
                                         <div class="customer d-flex mt-3">
                                             <div class="customer_img mt-2"><img src="{{asset($comment->image)}}" class="w-100 img-fluid" alt=""  /></div>
-                                            <div class="customer_info">
+                                            <div class="customer_info ">
                                                 <strong>{{$comment->name}} <br /></strong>
                                                 <span>{{Carbon\Carbon::parse($comment->created_at)->format('d M,Y')}}</span>
                                                 <p>
@@ -186,7 +186,7 @@
                                                     <input type="email" class="form-control border-radius-0" id="email" name="email" value="" placeholder="Email:"  />
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                                    <input type="text" class="form-control border-radius-0" id="phonenumber" name="phone" value="" placeholder="Phone:" required />
+                                                    <input type="number" class="form-control border-radius-0" id="phonenumber" name="phone" value="" placeholder="Phone:"  />
                                                 </div>
 
                                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">

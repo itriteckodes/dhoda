@@ -35,7 +35,7 @@
                     <div class=" text-uppercase">
                         <h2>Reset Password</h2>
                         <div class="billing_form">
-                            <form action="{{route('user.login')}}" method="POST">
+                            <form action="{{url('user/reset/password')}}" method="POST">
                                 @csrf
                                 <div class="form-row  form-group">
                                     
@@ -51,12 +51,10 @@
                                     </div>
                                 </div>
                                 <div class="chechout_btn text-left">
-                                    <button type="submit" class="btn border-radius-0 border-transparent">Login</button>
-                                    <a href="{{url('user/forgetpassword')}}" class=" font-bold mt-3">Forget Password?</a>
+                                    <button type="submit" class="btn border-radius-0 border-transparent">Continue</button>
                                 </div>
                                 
                             </form>
-                            <a href="{{route('auth.register')}}" >Create an account</a>
                         </div>
                     </div>
                 </div>

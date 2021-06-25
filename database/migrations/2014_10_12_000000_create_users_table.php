@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image')->nullable();
             $table->string('status')->default('pending');
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->string('verification')->nullable();
             $table->string('address');
             $table->rememberToken();
