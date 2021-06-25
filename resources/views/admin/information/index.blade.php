@@ -127,7 +127,7 @@
                                         <div class="form-group">
                                             <label>Enter Phone Number</label>
                                             <input type="text" name="phone" placeholder="Enter Phone Number"
-                                                value="{{ $information->phone }}" class="form-control" required>
+                                                value="{{ $information->phone }}" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Upload Logo <a href="{{ asset($information->image) }}"><i
@@ -137,7 +137,7 @@
                                         <div class="form-group">
                                             <label>Enter Email Address</label>
                                             <input type="email" name="email" placeholder="Enter Email Address"
-                                                value="{{ $information->email }}" class="form-control" required>
+                                                value="{{ $information->email }}" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Enter About Us Information</label>
@@ -147,7 +147,7 @@
                                         <div class="form-group">
                                             <label>Enter Address</label>
                                             <input type="text" name="address" placeholder="Enter Address"
-                                                value="{{ $information->address }}" class="form-control" required>
+                                                value="{{ $information->address }}" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Enter Privacy Policy Content</label>
@@ -157,23 +157,23 @@
                                         <div class="form-group">
                                             <label>Enter Facebook Link</label>
                                             <input type="text" name="fb" placeholder="Enter Facebook Link"
-                                                class="form-control" value="{{ $information->fb }}" required>
+                                                class="form-control" value="{{ $information->fb }}" >
                                         </div>
                                         <div class="form-group">
                                             <label>Enter Instagram Link</label>
                                             <input type="text" name="insta" value="{{ $information->insta }}"
-                                                placeholder="Enter Instagram Link" class="form-control" required>
+                                                placeholder="Enter Instagram Link" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label>Enter Twitter Link</label>
                                             <input type="text" name="twitter" value="{{ $information->twitter }}"
-                                                placeholder="Enter Twitter Link" class="form-control" required>
+                                                placeholder="Enter Twitter Link" class="form-control" >
                                         </div>
 
                                         <div class="form-group">
                                             <label>Enter Linkedin Link</label>
                                             <input type="text" name="pt" value="{{ $information->pt }}"
-                                                placeholder="Enter Pinterest Link" class="form-control" required>
+                                                placeholder="Enter Pinterest Link" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" value="Update" name="txt" class="mt-4 btn btn-primary">
