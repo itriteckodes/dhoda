@@ -31,15 +31,16 @@
 		<div class="header">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg navbar-light">
-					<a class="navbar-brand" href="index.html">
-						<img src="{{ asset('front/img/logo.png') }}" alt="">
+					<a class="navbar-brand my-auto" href="{{url('/')}}" style="color: #F69743; font-family: 'Poppins', 'Sans-serif';font-size:14px">
+						{{-- <img src="{{ asset('front/img/logo.png') }}" alt=""> --}}
+						Ameen Dhodha House
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<i class="icofont icofont-navigation-menu"></i>
 					</button>
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mx-auto">
+						<ul class="navbar-nav mx-auto pl-5">
 							<li class="nav-item active">
 								<a class="nav-link" href="{{url('/')}}">Home</a>
 							</li>
@@ -177,7 +178,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-12">
 					<div class="footer_txt text-center">
-						<p><span>Ameen Dhoda House 2021</span> All Right Reserved</p>
+						<p><span>Ameen Dhodha House 2021 </span>  All Right Reserved</p>
 					</div>
 				</div>
 			</div>
@@ -259,7 +260,7 @@
 		$(".partner-slider").slick({
 		  // normal options...
 		  infinite: false,
-		  slidesToShow: 5,
+		  slidesToShow: 4,
 		  slidesToScroll: 2,
 		  autoplay: true,
 		  autoplaySpeed: 2000,
@@ -279,7 +280,7 @@
 
 		  	breakpoint: 1201,
 		  	settings: {
-		  		slidesToShow: 3,
+		  		slidesToShow: 4,
 		  		dots: true
 		  	}
 

@@ -44,7 +44,7 @@
 
 <!-- FEATURES PART START -->
 <div class="container">
-    <div class="row my-5">
+    <div class="row my-2">
         <div class="col-12 text-center">
             <img src="{{asset('front/img/logo.png')}}" height="" width="" style="max-width: 30%" alt="">
         </div>
@@ -199,7 +199,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="section-title">Our Best Seller Product</h3>
-                <p class="section-subtitle">We here at Amin Dhodha provide best and the most delicious sweets from all categories in their pure and original taste</p>
+                <p class="section-subtitle">We here at Ameen Dhodha House provide best and the most delicious sweets from all categories in their pure and original taste</p>
             </div>
         </div>
 
@@ -247,7 +247,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="offer-content">
-                    <h3>Daily Essentials</h3>
+                    <h3 class="text-white">Daily Essentials</h3>
                     <h2>Sale 25% Off <br> All Sweet Products</h2>
                     <a href="{{route('product.index')}}" class="btn">Explore more <i class="icofont-bubble-right"></i></a>
                 </div>
@@ -260,49 +260,18 @@
 <!-- PARTNERS PART START -->
 <div class="full-partners">
     <div class="container">
-        <div class="row partner-slider">
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-1.png') }}" alt="">
+        {{-- @if(count(App\Models\Gallery::all())>0) --}}
+        <h3 class="section-title my-5 text-center">Ameen Dhodha House Gallery</h3>
+        <div class="row partner-slider mt-3">
+            @foreach (App\Models\Gallery::all() as $gallery)
+            <div class="col-md-12 ">
+                <div class="partner-img text-center py-3">
+                    <img class="w-100 p-2 img-thumbnail shadow" src="{{ asset($gallery->image) }}" alt="">
                 </div>
             </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-2.png') }}" alt="">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-3.png') }}" alt="">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-4.png') }}" alt="">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-5.png') }}" alt="">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-1.png') }}" alt="">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="partner-img text-center">
-                    <img class="w-50 mx-auto" src="{{ asset('front/img/partner-1.png') }}" alt="">
-                </div>
-            </div>
+            @endforeach
         </div>
+        {{-- @endif --}}
     </div>
 </div>
 <!-- PARTNERS PART END -->
@@ -336,7 +305,7 @@
             <div class="col-md-8">
                 <div class="testimonial-text">
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                               People have complained about the healthy measures..</p>
                         <h3>Mr. Furqan</h3>
@@ -344,7 +313,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                              People have complained about the healthy measures.</p>
                         <h3>Mr. Hussain</h3>
@@ -352,7 +321,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops naming Amin Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                              People have complained about the healthy measures.</p>
                         <h3>Mr. Ali</h3>

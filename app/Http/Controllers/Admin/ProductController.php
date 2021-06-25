@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -47,6 +48,14 @@ class ProductController extends Controller
             return redirect()->back()->withInput();
         }
         $product = Product::create($request->all());
+        if($request->has('images')){
+            foreach ($request->images as $key => $image) {
+                ProductImage::create([
+                    'product_id' => $product->id,
+                    'image' => $image
+                ]);
+            }
+        }
         toastr()->success('Products Created successfully');
         return redirect()->back();    
     }
@@ -85,6 +94,14 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->update($request->all());
+        if($request->has('images')){
+            foreach ($request->images as $key => $image) {
+                ProductImage::create([
+                    'product_id' => $product->id,
+                    'image' => $image
+                ]);
+            }
+        }
         toastr()->success('Product Informations Updated successfully');
         return redirect()->back();
     }

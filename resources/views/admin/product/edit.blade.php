@@ -41,7 +41,7 @@
                         <input type="number" name="stock" value="{{$product->stock}}"  placeholder="Enter Product Quantity" class="form-control" required>
                     </div>  
                     <div class="form-group">
-                        <label>Enter Product Image</label>
+                        <label>Enter Product Main Image</label>
                         <input name="image" multiple type="file" class="form-input-styled" data-fouc accept="image/*">
                     </div>                                         
                     <div class="form-group">
@@ -53,6 +53,20 @@
                             @endforeach
                         </select>
                     </div>  
+                    <div class="form-grou row">
+                        <div class="form-group col-md-6">
+                            <label>Related Image1 ( Optional )</label>
+                            <input type="file" name="images[]" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Related Image2 ( Optional )</label>
+                            <input type="file" name="images[]" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>Related Image3 ( Optional )</label>
+                        <input type="file" name="images[]" class="form-control">
+                    </div>
                     <div class="form-group col-md-12">
                         <label>Description</label>
                         <textarea class="form-control summernote"  id="description" name="detail" required>{{$product->detail}}</textarea>
@@ -67,6 +81,36 @@
         </div>
         <!-- /basic layout -->
     </div>
+</div>
+
+<div class="card">
+    <h3 class="p-3">Product Related Images</h3>
+    <table class="table datatable-save-state">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($product->images as $key => $image)
+            <tr>
+                <td>{{$key+1}}</td>
+                <td><img src="{{asset($image->image)}}" style="width:100px;height:auto;"></td>
+                <td>
+                    <div class="btn-group">
+                        <form action="{{route('admin.productImage.destroy',$image->id)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                      </div>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 @endsection
 @section('scripts')

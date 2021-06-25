@@ -217,6 +217,12 @@
 								<i class="icon-folder-plus"></i>
 								<span>Information</span>
 							</a>
+						</li>	
+						<li class="nav-item">
+							<a href="{{route('admin.gallery.index')}}" class="nav-link {{Request::is('admin/gallery')?'active':''}}">
+								<i class="icon-folder-plus"></i>
+								<span>Gallery</span>
+							</a>
 						</li>
 						<li class="nav-item">
 							<a href="{{route('admin.profile.index')}}" class="nav-link {{Request::is('admin/profile')?'active':''}}">

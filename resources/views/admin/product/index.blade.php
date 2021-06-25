@@ -7,7 +7,6 @@
 @section('content')
 
 <div class="card">
-
     <table class="table datatable-save-state">
         <thead>
             <tr>
@@ -40,7 +39,7 @@
                         <form action="{{route('admin.product.destroy',$product->id)}}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-dark btn-sm">Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
                       
                       </div>

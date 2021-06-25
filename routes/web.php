@@ -54,6 +54,10 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'App\Http\Contr
         Route::view('order/completed', 'admin.order.completed')->name('completed.order');
         Route::get('order/{order}/complete','OrderController@completeOrder')->name('complete.order');
         Route::resource('order','OrderController');
+        Route::resource('productImage','ProductImageController');
+        Route::resource('gallery','GalleryImageController');
+
+        // Route::
       
   });
 });
