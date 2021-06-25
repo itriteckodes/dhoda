@@ -63,6 +63,9 @@
 							
 							@if(Auth::guard('user')->user()!=null)
 							<li><a href="{{ route('user.dashboard.index') }}" class="nav-link">Dashboard</a></li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{route('user.logout')}}">Logout</a>
+							</li>
 							@else
 							<li class="nav-item">
 								<a class="nav-link" href="{{route('auth.login')}}">Login/Register</a>
