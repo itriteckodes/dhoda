@@ -46,11 +46,11 @@
                                     </div>
 
                                     <div class="col-md-12  mt-3">
-                                        <input type="password" class="form-control border-radius-0" id="checkout_phonenumber" name="password"  placeholder="Enter password" />
+                                        <input type="password" class="form-control border-radius-0" id="checkout_phonenumber" name="password"  placeholder="Enter password" required/>
                                     </div>
 
                                     <div class="col-md-12  mt-3">
-                                        <input type="number" class="form-control border-radius-0" id="checkout_country" name="phone"  placeholder="Enter phone" />
+                                        <input type="number" class="form-control border-radius-0" id="checkout_country" name="phone"  placeholder="Enter phone" required />
                                     </div>
 
                                     {{-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">

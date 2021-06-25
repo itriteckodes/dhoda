@@ -70,6 +70,11 @@ Route::group(['prefix' => 'user', 'as'=>'user.','namespace' => 'App\Http\Control
   // Route::view('verification', 'user.auth.forget')->name('verification');
   Route::view('reset', 'user.auth.reset')->name('reset');
   Route::post('register','AuthController@register')->name('register');
+
+  Route::get('forgetpassword','AuthController@forgetPassword')->name('forgetpassword');
+  Route::post('forgotpassword','AuthController@verification')->name('forgetpassword');
+  Route::post('user/reset/password','AuthController@resetPassword');
+
   // Route::post('verification','AuthController@sendVerification')->name('verification');
   // Route::post('resetPassword','AuthController@resetPassword')->name('resetPassword');
   Route::group(['middleware' => 'auth:user'], function () { 
