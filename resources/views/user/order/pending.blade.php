@@ -20,6 +20,7 @@
             </tr>
         </thead>
         <tbody>
+            
             @foreach (App\Models\Order::where('user_id',Auth::user()->id)->where('status','pending')->get() as $key => $order)
             <tr role="row">
                 <td>{{ $key+1 }}</td>

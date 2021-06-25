@@ -24,6 +24,9 @@
                     @method('PUT')
                     @csrf
                     <div class="row">
+                        <div class="form-group col-md-12">
+                            <img src="{{Auth::user()->image}}" alt="" height="130px" width="130px" style="border-radius: 50%">
+                        </div>
                         <div class="form-group col-md-6">
                             <label>Your Name: </label>
                             <input type="text" name="name" value="{{Auth::user()->name}}" class="form-control" required>

@@ -43,10 +43,10 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'App\Http\Contr
         /******************Product  ROUTES****************/
         Route::resource('product', 'ProductController');
         /******************Chat  ROUTES****************/
-        Route::resource('chat', 'ChatController');
-        Route::resource('chatmessage', 'ChatMessageController');
+        // Route::resource('chat', 'ChatController');
+        // Route::resource('chatmessage', 'ChatMessageController');
         /*******************Purchase ROUTES*************/
-        Route::view('purchase', 'admin.purchase.index')->name('purchase.index');
+        // Route::view('purchase', 'admin.purchase.index')->name('purchase.index');
         /******************User  ROUTES****************/
         Route::resource('user', 'UserController');
 
@@ -67,11 +67,11 @@ Route::group(['prefix' => 'user', 'as'=>'user.','namespace' => 'App\Http\Control
   /*******************LOGIN ROUTES*************/
   Route::post('login','AuthController@login')->name('login');
    /******************REGISTERED ROUTES****************/
-  Route::view('verification', 'user.auth.forget')->name('verification');
+  // Route::view('verification', 'user.auth.forget')->name('verification');
   Route::view('reset', 'user.auth.reset')->name('reset');
   Route::post('register','AuthController@register')->name('register');
-  Route::post('verification','AuthController@sendVerification')->name('verification');
-  Route::post('resetPassword','AuthController@resetPassword')->name('resetPassword');
+  // Route::post('verification','AuthController@sendVerification')->name('verification');
+  // Route::post('resetPassword','AuthController@resetPassword')->name('resetPassword');
   Route::group(['middleware' => 'auth:user'], function () { 
   /*******************Logout ROUTES*************/       
   Route::get('logout','AuthController@logout')->name('logout');
@@ -80,23 +80,23 @@ Route::group(['prefix' => 'user', 'as'=>'user.','namespace' => 'App\Http\Control
   /*******************Dashoard ROUTES*************/
   Route::view('dashboard', 'user.dashboard.index')->name('dashboard.index');
   /******************Course  ROUTES****************/
-  Route::get('course/purchased','CourseController@purchased')->name('course.purchased');
-  Route::get('course/detail/{title}', 'CourseController@detail')->name('course.detail');
-  Route::get('course/section/{title}', 'CourseController@section')->name('course.section');
-  Route::get('course/files/{id}', 'CourseController@downloadFile')->name('course.file');
-  Route::resource('course', 'CourseController');
+  // Route::get('course/purchased','CourseController@purchased')->name('course.purchased');
+  // Route::get('course/detail/{title}', 'CourseController@detail')->name('course.detail');
+  // Route::get('course/section/{title}', 'CourseController@section')->name('course.section');
+  // Route::get('course/files/{id}', 'CourseController@downloadFile')->name('course.file');
+  // Route::resource('course', 'CourseController');
   /******************Purchase  ROUTES****************/
-  Route::resource('purchase', 'PurchaseController');
+  // Route::resource('purchase', 'PurchaseController');
     /******************Quiz  ROUTES****************/
-    Route::view('quiz/results', 'user.quiz.results')->name('quiz.results');
-    Route::resource('quiz', 'QuizController');
+    // Route::view('quiz/results', 'user.quiz.results')->name('quiz.results');
+    // Route::resource('quiz', 'QuizController');
     /******************PayPal  ROUTES****************/
-    Route::get('handle-payment/{id}', 'PayPalPaymentController@handlePayment')->name('make.payment');
-    Route::get('cancel-payment/{id}', 'PayPalPaymentController@paymentCancel')->name('cancel.payment');
-    Route::get('payment-success/{id}', 'PayPalPaymentController@paymentSuccess')->name('success.payment');
+    // Route::get('handle-payment/{id}', 'PayPalPaymentController@handlePayment')->name('make.payment');
+    // Route::get('cancel-payment/{id}', 'PayPalPaymentController@paymentCancel')->name('cancel.payment');
+    // Route::get('payment-success/{id}', 'PayPalPaymentController@paymentSuccess')->name('success.payment');
     /******************Chat  ROUTES****************/
-    Route::resource('chat', 'ChatController');
-    Route::resource('chatmessage', 'ChatMessageController');
+    // Route::resource('chat', 'ChatController');
+    // Route::resource('chatmessage', 'ChatMessageController');
 
     /////////////////// Order Related Routes ////////////////////
    

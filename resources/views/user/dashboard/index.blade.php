@@ -3,10 +3,8 @@
 @section('title')
     User Dashboard
 @endsection
-
 @section('content')
 <div class="row">
-    
     <div class="col-sm-4 col-xl-4">
         <a href="{{route('user.order.index')}}">
             <div class="card card-body bg-blue-400 has-bg-image">
