@@ -28,7 +28,7 @@
                                 <th>PRODUCT</th>
                                 <th>PRICE</th>
                                 <th>QUANTITY</th>
-                                <th>TOTAL</th>
+                                <th>SUBTOTAL</th>
                                 <th></th>
                             </tr>
                         </thead>
