@@ -6,7 +6,7 @@
 @section('content')
 <div class="card">
 
-    <table class="table datatable-save-state table-responsive">
+    <table class="table datatable-save-state ">
         <thead>
             <tr>
                 <th>SR#</th>
