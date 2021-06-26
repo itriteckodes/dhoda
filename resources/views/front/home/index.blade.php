@@ -258,6 +258,7 @@
 <!-- OFFER PART END -->
 
 <!-- PARTNERS PART START -->
+@if(count(App\Models\Gallery::all())>0)
 <div class="full-partners">
     <div class="container">
         {{-- @if(count(App\Models\Gallery::all())>0) --}}
@@ -266,7 +267,7 @@
             @foreach (App\Models\Gallery::all() as $gallery)
             <div class="col-md-12 ">
                 <div class="partner-img text-center py-3">
-                    <img class="w-100 p-2 img-thumbnail shadow" src="{{ asset($gallery->image) }}" alt="">
+                   <a href="{{ asset($gallery->image) }}"><img class="w-100 p-2 img-thumbnail shadow" src="{{ asset($gallery->image) }}" alt=""></a> 
                 </div>
             </div>
             @endforeach
@@ -274,6 +275,7 @@
         {{-- @endif --}}
     </div>
 </div>
+@endif
 <!-- PARTNERS PART END -->
 
 <!-- TESTIMONIAL PART START -->
