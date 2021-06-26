@@ -2438,6 +2438,13 @@
 }
 
 @media screen and (max-width: 491px) {
+    .full-banner{
+        /* padding: 285px 200px; */
+        background: url(../img/banner-sm.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
     .navbar {
         background: url(../img/header-sm-bg.png);
         background-repeat: no-repeat;
