@@ -2450,4 +2450,48 @@
         }
     }
 
+    
+    @media screen and (max-width: 491px){
+        .navbar{
+            background:url(../img/header-sm-bg.png);
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            /* background-size: cover; */
+        }
+        .navbar-collapse{
+            margin-top: 23px!important;
+            background: #5B2110;
+            width:100%;
+        }
+        .navbar-brand{
+            /* text-align: center!important; */
+            margin-left:55px;
+        }
+        .show{
+            height:510px;
+        } 
+        .navbar-nav{
+            padding-top: 46px;
+            padding-bottom:70px;
+        }
+        .nav-item{
+            padding:10px 0px;
+        }
+        .nav-link{
+            font-size: 18px!important;
+        }
+        .header-content{
+            padding: 0px 10px;  
+        }
+        .header_icon{
+            margin-left:auto!important;
+        }
+    }
+    
+    /* @media screen and (max-width: 575px){
+        .show{
+            height:487px;
+        } 
+    } */
+
     /*------------------------------------------*/
