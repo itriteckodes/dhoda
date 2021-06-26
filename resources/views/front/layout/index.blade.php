@@ -37,7 +37,7 @@
 						{{-- <img src="{{ asset('front/img/logo.png') }}" alt=""> --}}
 						Ameen Dhodha House
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<i class="icofont icofont-navigation-menu"></i>
 					</button>
 
