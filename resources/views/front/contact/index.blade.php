@@ -42,10 +42,10 @@
 
                     <div class="footer_social">
                         <ul class="footer_social_icons">
-                            <li><a href="#"><i class="icofont-skype"></i></a></li>
-                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="#"><i class="icofont-whatsapp"></i></a></li>
+                            <li><a href="{{$information->pt}}"><i class="icofont-linkedin"></i></a></li>
+								<li><a href="{{$information->fb}}"><i class="icofont-facebook"></i></a></li>
+								<li><a href="{{$information->twitter}}"><i class="icofont-twitter"></i></a></li>
+								<li><a href="{{$information->insta}}"><i class="icofont-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>

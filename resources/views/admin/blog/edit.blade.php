@@ -15,6 +15,7 @@
         <div class="card">
             <div class="card-header header-elements-inline">
                 <h5 class="card-title">{{$blog->title}} Blog</h5>
+                <span>(Note: Fields with <span class="text-danger font-size-lg" style="font-size: 18px"> *</span> sign are required)</span>
                 <div class="header-elements">
                     <div class="list-icons">
                         <a class="list-icons-item" data-action="collapse"></a>
@@ -28,16 +29,20 @@
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label>Enter Blog Title</label>
+                        <label>Enter Blog Title<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                         <input type="text" name="title" placeholder="Enter Blog Title" class="form-control" value="{{$blog->title}}" required>
                         <input type="hidden" name="id" placeholder="Enter Blog Title" class="form-control" value="{{$blog->id}}" required>
                     </div>   
+                    <div class="form-group">
+                        <label>Enter Blog Url Name<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
+                        <input type="text" name="name" value="{{$blog->name}}" placeholder="Enter Blog Url Name" class="form-control" required>
+                    </div> 
                     <div class="form-group">
                         <label>Enter Blog Image</label>
                         <input name="image" multiple type="file" class="form-input-styled" data-fouc>
                     </div>                                         
                     <div class="form-group">
-                        <label>Select Blog Category</label>
+                        <label>Select Blog Category<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                         <select name="category_id" class="form-control" id="" required>
                             <option value="{{$blog->category->id}}">{{$blog->category->name}}</option>
                             @foreach (App\Models\Category::all() as $category)
@@ -56,7 +61,7 @@
                       </div>
                       @endforeach
                     <div class="form-group col-md-12">
-                        <label>Description</label>
+                        <label>Description<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                         <textarea class="form-control summernote"  id="description" name="description" required>{{$blog->description}}</textarea>
                     </div>
                     <div class="text-right">

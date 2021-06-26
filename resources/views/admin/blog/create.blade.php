@@ -16,7 +16,9 @@ Create Blog
         <!-- Basic layout-->
         <div class="card">
             <div class="card-header header-elements-inline">
+                
                 <h5 class="card-title">Add New Blog</h5>
+                <span>(Note: Fields with <span class="text-danger font-size-lg" style="font-size: 18px"> *</span> sign are required)</span>
                 <div class="header-elements">
                     <div class="list-icons">
                         <a class="list-icons-item" data-action="collapse"></a>
@@ -31,22 +33,22 @@ Create Blog
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group ">
-                                <img id="preview_img" src="{{asset('images/blog/721606330121.jpg')}}" height="240" width="auto" style="padding-bottom: 10px;" alt="">
+                                <img id="preview_img" src="{{asset('images/blog/721606330121.jpg')}}" height="240" width="300" style="padding-bottom: 10px;" alt="">
                                 <input type="file" value="{{old('image')}}"  name="image" id="profile_image" onchange="loadPreview(this);" class="form-input-styled"  required>
                                 </div>
                         </div>
                         <div class="col-md-7">
                             <div class="form-group">
-                                <label>Enter Blog Title</label>
+                                <label>Enter Blog Title<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                                 <input type="text" name="title" value="{{old('title')}}"  placeholder="Enter Blog Title" class="form-control" required>
                                 <input type="hidden" name="admin_id" value="{{Auth::user()->id}}" placeholder="Enter Blog Title" class="form-control" required>
                             </div>  
                             <div class="form-group">
-                                <label>Enter Blog Url Name</label>
+                                <label>Enter Blog Url Name<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                                 <input type="text" name="name" placeholder="Enter Blog Url Name" class="form-control" required>
                             </div>                                       
                             <div class="form-group">
-                                <label>Select Blog Category</label>
+                                <label>Select Blog Category<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
                                 <select name="category_id" class="form-control"   id="" required>
                                     <option value="">Select</option>
                                     @foreach (App\Models\Category::all() as $category)
@@ -61,11 +63,11 @@ Create Blog
                         </div>
                     </div>
                     <div class="form-group col-md-12">
-                        <label>Description</label>
-                        <textarea class="form-control summernote"  id="description" name="description" required>{{old('description')}} </textarea>
+                        <label>Description<span class="text-danger font-size-lg" style="font-size: 18px"> *</span></label>
+                        <textarea class="form-control summernote" id="description" name="description" required>{{old('description')}} </textarea>
                     </div>
                     <div class="text-right">
-                        <button type="submit" class="btn btn-primary">Create 
+                        <button type="submit" class="btn btn-primary create-btn">Create 
                             <i class="icon-plus22 ml-2"></i>
                         </button>
                     </div>
@@ -94,6 +96,15 @@ Create Blog
           reader.readAsDataURL(input.files[0]);
       }
    }
+   $(document).ready(function(){
+        $('.create-btn').on('click',function(){
+            let description = $('#description').val();
+            if($description==''){
+                
+            }
+        });
+   });
+
 </script>
 
 @endsection
