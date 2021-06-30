@@ -26,6 +26,7 @@ class CreateInformationTable extends Migration
             $table->longText('about')->nullable();
             $table->longText('privacy')->nullable();
             $table->longText('terms')->nullable();
+            $table->text('banner_text')->nullable();
             $table->timestamps();
         });
     }

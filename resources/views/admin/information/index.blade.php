@@ -148,6 +148,11 @@
                                             <label>Enter Address</label>
                                             <input type="text" name="address" placeholder="Enter Address"
                                                 value="{{ $information->address }}" class="form-control" >
+                                        </div> 
+                                        <div class="form-group">
+                                            <label>Enter Banner Text</label>
+                                            <textarea name="banner_text" id="" cols="30" rows="4"
+                                                class="form-control" placeholder="Enter new text for daily essentials banner">{{ $information->banner_text }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Enter Privacy Policy Content</label>

@@ -105,7 +105,7 @@
             <div class="col-md-6">
                 <div class="offer-content">
                     <h3 class="text-white">Daily Essentials</h3>
-                    <h2>Sale 25% Off <br> All Sweet Products</h2>
+                    <h2>{{$information->banner_text}}</h2>
                     <a href="{{route('product.index')}}" class="btn">Explore more <i class="icofont-bubble-right"></i></a>
                 </div>
             </div>

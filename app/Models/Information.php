@@ -12,7 +12,7 @@ class Information extends Model
 
     protected $fillable = [
         'phone','image','email','about','address','terms','privacy','facebook','instagram','twitter',
-        'linkedin'
+        'linkedin','banner_text'
     ];
     public function setImageAttribute($value){
         $this->attributes['image'] = ImageHelper::saveIImage($value,'/images/information/');
