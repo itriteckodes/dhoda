@@ -30,6 +30,8 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('postal_code')->nullable();
             $table->string('status')->default('pending');
             $table->text('note')->nullable();
+            $table->string('payment_method')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

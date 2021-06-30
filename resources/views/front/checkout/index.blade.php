@@ -64,8 +64,20 @@
                                     </div>
                                 </div>
                                 <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="payment" id="credit_card" value="" checked />
+                                    <input class="form-check-input" type="radio" name="payment_method" id="credit_card" value="cash_delivery" />
                                     <label class="form-check-label" for="credit_card">Cash On Delivery</label>
+                                </div> 
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"/>
+                                    <label class="form-check-label" for="credit_card">Jazz Cash</label>
+                                </div> 
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa"/>
+                                    <label class="form-check-label" for="credit_card">Easypaisa</label>
+                                </div> 
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl"/>
+                                    <label class="form-check-label" for="credit_card">UBL</label>
                                 </div>
                                 <div class="chechout_btn text-left">
                                     <button type="submit" class="btn border-radius-0 border-transparent">Order Now</button>

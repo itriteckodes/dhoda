@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title> HOME - AMEEN DHODA HOUSE</title>
+<title> HOME PAGE - AMIN DHODA HOUSE</title>
 @endsection
 @section('body')
 
@@ -46,160 +46,17 @@
 <div class="container">
     <div class="row my-2">
         <div class="col-12 text-center">
-            <img src="{{asset('front/img/logo.png')}}" height="" width="" style="max-width: 30%" alt="">
+            <img src="{{asset('front/img/logo.png')}}"  style="max-width: 30%" alt="Amin dhodha house logo">
         </div>
     </div>
 </div>
-{{-- <div class="full-features">
-    <div class="container">
-        <div class="row slider">
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-wheat"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>Healthy Food</h3>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-truck-loaded"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>Free Shipping</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-ui-chat"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>24/07 Support</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-rooster"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>From our farm</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-wheat"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>Healthy Food</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-truck-loaded"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>Free Shipping</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-ui-chat"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>24/07 Support</h3>
-                    </div>
-                </div>
-            </div> 
-
-         <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-                <div class="features-box text-center">
-                    <div class="features-icon-border">
-                        <div class="features-icon">
-                            <i class="icofont icofont-rooster"></i>
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h3>From our farm</h3>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </div>
-</div> --}}
-<!-- FEATURES PART END -->
-
-{{-- <!-- ABOUT US PART START -->
-<div class="full-about" id="full-about">
-    <div class="container">
-        <div class="row">
-            <div class="about-title">
-                <h2>About us</h2>
-            </div>
-            <div class="col-md-6">
-                <div class="about-content">
-                    <h3>We Providing Services Since 1841 With Proud.</h3>
-                    <div class="about-details">
-                        <p>The readable content off a page when looking layout using Lorem Ipsum is that it has.</p>
-                        <p>It is a long established fact that a reader will be distracted the readable content off a
-                            page when looking at its layout using Lorem Ipsum is that it has.</p>
-                    </div>
-
-                    <div class="about-icon-text align-items-center">
-                        <div class="abt-icon">
-                            <i class="icofont-fruits"></i>
-                        </div>
-                        <div class="abt-text">
-                            <h2>Fresh Look And <span>100% Organic</span> Farm Fresh Produce Right.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ABOUT US PART END --> --}}
-
 <!-- BEST SELLER PART START -->
 <div class="full-bestSeller" id="product">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="section-title">Our Best Seller Product</h3>
-                <p class="section-subtitle">We here at Ameen Dhodha House provide best and the most delicious sweets from all categories in their pure and original taste</p>
+                <p class="section-subtitle">We here at Amin Dhodha House provide best and the most delicious sweets from all categories in their pure and original taste</p>
             </div>
         </div>
 
@@ -208,7 +65,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="product">
                         <div class="product-img">
-                            <img class="w-100" src="{{asset($product->image)}}" alt="">
+                            <img class="w-100" src="{{asset($product->image)}}" alt=" {{$product->name}} image">
                         </div>
                         <div class="product-content">
                             <div class="product-details position-bottom-left">
@@ -262,7 +119,7 @@
 <div class="full-partners">
     <div class="container">
         {{-- @if(count(App\Models\Gallery::all())>0) --}}
-        <h3 class="section-title my-5 text-center">Ameen Dhodha House Gallery</h3>
+        <h3 class="section-title my-5 text-center">Amin Dhodha House Gallery</h3>
         <div class="row partner-slider mt-3">
             @foreach (App\Models\Gallery::all() as $gallery)
             <div class="col-md-12 ">
@@ -292,22 +149,22 @@
             <div class="col-md-4">
                 <div class="testimonial-img text-center">
                     <div class="img">
-                        <img class="w-100" src="{{ asset('front/img/testimonial-1.png') }}" alt="">
+                        <img class="w-100" src="{{ asset('front/img/testimonial-1.png') }}" alt="Happy Customer Image">
                     </div>
 
                     <div class="img">
-                        <img class="w-100" src="{{ asset('front/img/testimonial-2.png') }}" alt="">
+                        <img class="w-100" src="{{ asset('front/img/testimonial-2.png') }}" alt="Happy Customer Image">
                     </div>
 
                     <div class="img">
-                        <img class="w-100" src="{{ asset('front/img/testimonial-3.png') }}" alt="">
+                        <img class="w-100" src="{{ asset('front/img/testimonial-3.png') }}" alt="Happy Customer Image">
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="testimonial-text">
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAming Amin Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                               People have complained about the healthy measures..</p>
                         <h3>Mr. Furqan</h3>
@@ -315,7 +172,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAming Amin Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                              People have complained about the healthy measures.</p>
                         <h3>Mr. Hussain</h3>
@@ -323,7 +180,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                        <p>“ Nowadays, there are many shops nAmeeng Ameen Dhodha House in Khushab and claiming to be original one.
+                        <p>“ Nowadays, there are many shops nAming Amin Dhodha House in Khushab and claiming to be original one.
                              Everyone is making their own version of Dhodha using substandard ingredients.
                              People have complained about the healthy measures.</p>
                         <h3>Mr. Ali</h3>

@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>Blogs - Ameen Dhoda House</title>
+<title>Blogs - Amin Dhoda House</title>
 <meta name="description" content="">
 
 <!--Keywords -->
@@ -104,21 +104,6 @@
                     </div>
                     @endforeach
                 </div>
-               
-                    {{-- <div class="row mt-5 text-center">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="pages_num">
-                                    <ul>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li>
-                                            <a href="#"><i class="icofont-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>
-                    </div> --}}
             </div>
         </div>
     </div>

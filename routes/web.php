@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Information;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -139,6 +140,12 @@ Route::get('tag/{id}/blogs','Front\PageController@shwTagNext')->name('tag.show')
 Route::post('order/tracking','Front\OrderController@trackOrder')->name('order.tracking');
 Route::resource('order','Front\OrderController');
 Route::resource('comment','Front\CommentController');
+Route::resource('payment','Front\PaymentController');
+
+Route::get('transaction',function(){
+  $information = Information::find(1);
+  return view('front.payment.index')->with('information',$information);
+});
 
   ////////////////////// Cart Related Routes /////////////////////////
   Route::get('cart', 'Front\CartController@cart')->name('cart');

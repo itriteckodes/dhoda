@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-    <title>CONTACT US - Ameen Dhoda House</title>
+    <title>CONTACT US - Amin Dhoda House</title>
     <meta name="description" content="">
 
     <!--Keywords -->

@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-    <title>User Registration - Ameen Dhoda House</title>
+    <title>User Registration - Amin Dhoda House</title>
     <meta name="description" content="">
     <!--Keywords -->
     <meta name="keywords"

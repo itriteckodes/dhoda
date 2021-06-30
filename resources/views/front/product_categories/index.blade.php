@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>Products Categories- Ameen Dhoda House</title>
+<title>Products Categories- Amin Dhoda House</title>
 <meta name="description" content="">
 
 <!--Keywords -->

@@ -17,4 +17,7 @@ class ProductImage extends Model
     public function setImageAttribute($value){
         $this->attributes['image'] = ImageHelper::saveBImage($value,'/images/products/');
     }
+    public function getImageAttribute($value){
+        return asset($value);
+    }
 }

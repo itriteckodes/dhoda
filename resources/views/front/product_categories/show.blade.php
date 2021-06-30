@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>{{$category->name}} Products- Ameen Dhoda House</title>
+<title>{{$category->name}} Products- Amin Dhoda House</title>
 <meta name="description" content="">
 
 <!--Keywords -->

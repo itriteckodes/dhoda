@@ -1,11 +1,11 @@
 @extends('front.layout.index')
 @section('title')
-<title>About Us - Ameen Dhoda House</title>
-<meta name="description" content="">
+<title>About Us - Amin Dhoda House</title>
+<meta name="description" content="amin dhodha house best dhodha and sweets">
 
 <!--Keywords -->
-<meta name="keywords" content="modern, creative, website, html5, bootstrap responsive, parallax, soft, front-end, designer, coming soon, account, portfolio, photographer, grid, social, modules, design, personal, faq, one page, multi-purpose, branding, studio, agency, templates, css3, carousel, slider, corporate, theme, quadra, demos, blog, shop" />
-<meta name="author" content="GoldEyes" />
+<meta name="keywords" content="dhoda, sohan halwa, amindhodha, Amin dhodha house, patisa, chana burfi, moti chor, front-end, designer, coming soon, account, portfolio, photographer, grid, social, modules, design, personal, faq, one page, multi-purpose, branding, studio, agency, templates, css3, carousel, slider, corporate, theme, quadra, demos, blog, shop" />
+<meta name="author" content="amindhodha" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 @endsection
 @section('body')
@@ -65,7 +65,7 @@
 
         <div class="welcome-us-block" >
             <div class="container">
-                <h4 class="title">Welcome to Ameen Dhoda House!</h4>
+                <h4 class="title">Welcome to Amin Dhoda House!</h4>
                 <div class="row">
                     <div class="col-md-6" style="margin-top:55px!important;">
                         <img src="{{asset('front/assets/images/about-us/bn011.png')}}" alt="" width="622" height="656">

@@ -35,7 +35,7 @@
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<a class="navbar-brand my-auto text-white" href="{{url('/')}}" style=" font-family: 'Poppins', 'Sans-serif';font-size:18px; font-weight:500">
 						{{-- <img src="{{ asset('front/img/logo.png') }}" alt=""> --}}
-						Ameen Dhodha House
+						Amin Dhodha House
 					</a>
 					<button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<i class="icofont icofont-navigation-menu"></i>
@@ -184,7 +184,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-12">
 					<div class="footer_txt text-center">
-						<p><span>Ameen Dhodha House 2021 </span>  All Right Reserved</p>
+						<p><span>Amin Dhodha House 2021 </span>  All Right Reserved</p>
 					</div>
 				</div>
 			</div>

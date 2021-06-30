@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('code')->nullable();
             $table->string('verification')->nullable();
             $table->string('address');
+            $table->double('e_wallet')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>PRIVACY POLICY - Ameen Dhoda House</title>
+<title>PRIVACY POLICY - Amin Dhoda House</title>
 <meta name="description" content="">
 
 <!--Keywords -->
@@ -28,7 +28,7 @@
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <div class="container text-center" >
-            <h4 class="title">Privacy Policy of Ameen Dhoda House!</h4>
+            <h4 class="title">Privacy Policy of Amin Dhoda House!</h4>
             <div class="text-wraper">
                 <p class="text-info">{!! $information->privacy !!}</p>
             </div>

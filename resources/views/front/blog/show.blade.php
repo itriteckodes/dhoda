@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>{{$blog->title}} - {{$blog->category->name}} -Ameen Dhodha House</title>
+<title>{{$blog->title}} - {{$blog->category->name}} -Amin Dhodha House</title>
 {{-- <meta name="description" content="{!! $blog->description !!}" /> --}}
 <!--Keywords -->
 <meta name="keywords" content=" @foreach ($blog->tags as $tag){{$tag->tag}},@endforeach"  />
@@ -8,14 +8,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 <meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{{$blog->title}} | {{$blog->category->name}} | Ameen Dhodha House" />
+	<meta property="og:title" content="{{$blog->title}} | {{$blog->category->name}} | Amin Dhodha House" />
 	{{-- <meta property="og:description" content="{!! substr( $blog->description, 0, 230) !!}" /> --}}
 	<meta property="og:url" content="{{Request::url()}}" />
 	<meta property="og:site_name" content="GYNOBST.COM" />
-	<meta property="article:publisher" content="https://facebook.com/Ameen Dhodha House" />
+	<meta property="article:publisher" content="https://facebook.com/Amin Dhodha House" />
 	<meta property="og:image" content="{{asset($blog->image)}}" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{{$blog->title}} | {{$blog->category->name}} | Ameen Dhodha House" />
+	<meta name="twitter:title" content="{{$blog->title}} | {{$blog->category->name}} | Amin Dhodha House" />
 	{{-- <meta name="twitter:description" content="{!! substr( $blog->description, 0, 230) !!}" /> --}}
 	<meta name="twitter:image" content="{{asset($blog->image)}}" />
 @endsection
@@ -27,7 +27,6 @@
 </style>
     <!-- HERO SECTION PART START -->
     <div class="hero_section">
-        <div class="png_img"><img class="w-100 img-fluid" src="img/leaf.png" alt="" /></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -89,24 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="populer_tag">
-                                <div class="sidebar">
-                                    <h4 class="border-0">Related Tags</h4>
-                                </div>
-                                <div class="populer_btn">
-                                    <ul>
-                                        @foreach ($blog->tags as $tag)
-                                        <li><a href="{{route('tag.show',$tag->id)}}" class="text-dark">{{$tag->tag}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
-
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -128,22 +110,6 @@
                                     <p>{!! $blog->description !!}</p>
                                 </div>
                                 <div class="blog_details">
-                                    {{-- <div class="details_img mt-3 mb-3">
-                                        <div class="row">
-                                            <div class="col-xs-4 col-sm-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <img src="img/blogdetails1.jpg" class="w-100 img-fluid" alt="" />
-                                            </div>
-
-                                            <div class="col-xs-4 col-sm-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <img src="img/blogdetails2.jpg" class="w-100 img-fluid" alt="" />
-                                            </div>
-
-                                            <div class="col-xs-4 col-sm-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                                <img src="img/blogdetails3.jpg" class="w-100 img-fluid" alt="" />
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    
                                     <div class="details_comment mt-5">
                                         <strong>Comment</strong>
                                         @foreach ($blog->comments as $comment)
@@ -158,19 +124,6 @@
                                             </div>
                                         </div>
                                         @endforeach
-                                        
-                                        {{-- <div class="customer d-flex mt-3">
-                                            <div class="customer_img mt-2"><img src="img/customer1.jpg" class="w-100 img-fluid" alt="" /></div>
-
-                                            <div class="customer_info">
-                                                <strong>Belitaram Kusani<br /></strong>
-                                                <span>20 April 2020</span>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doem eiusmoed tempor encidi dunt ut labore et dolorem magna aliqua. Ut enim ad minim veniam, quis nostru exercitation
-                                                </p>
-                                            </div>
-                                            <div class="reply"><i class="icofont-reply"></i>Reply</div>
-                                        </div> --}}
                                     </div>
                                     <div class="blog_form mt-4">
                                         <strong>Leave A Comment Here</strong>

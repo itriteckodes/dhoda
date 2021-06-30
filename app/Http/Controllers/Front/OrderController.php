@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Helpers\Cart;
 use App\Http\Controllers\Controller;
+use App\Models\Information;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
@@ -47,6 +48,9 @@ class OrderController extends Controller
                     $user_id = null;
                 }else{
                    $user_id = Auth::guard('user')->user()->id;
+                   $user = Auth::guard('user')->user();
+                   $user->e_wallet = $user->e_wallet+$request->amount;
+                   $user->update();
                 }
         
                 $amount = (Session::get('cart')['amount']);
@@ -75,6 +79,22 @@ class OrderController extends Controller
                     //     ->subject('Order tracking code');
                     // }); 
                 // toastr()->success('Please check your email for code to track your order');
+                        $information = Information::find(1);
+                
+                if($request->payment_method == 'jazz_cash'){
+                    $order->delete();
+                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                }
+                if($request->payment_method == 'easypaisa'){
+                    $order->delete();
+                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                }
+                if($request->payment_method == 'ubl'){
+                    $order->delete();
+                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                }
+
+
                 toastr()->success('Order Placed Successfully');
                 return redirect('/');
     }

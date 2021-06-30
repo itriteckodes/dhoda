@@ -1,4 +1,7 @@
 @extends('front.layout.index')
+@section('title')
+    Cart - Amin Dhodha House
+@endsection
 @section('body')
     <!-- HERO SECTION PART START -->
     <div class="hero_section">
