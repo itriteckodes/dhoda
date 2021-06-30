@@ -73,7 +73,7 @@ Route::group(['prefix' => 'user', 'as'=>'user.','namespace' => 'App\Http\Control
   Route::post('register','AuthController@register')->name('register');
 
   Route::get('forgetpassword','AuthController@forgetPassword')->name('forgetpassword');
-  Route::post('forgotpassword','AuthController@verification')->name('forgetpassword');
+  Route::post('forgot/password','AuthController@verification')->name('forgotpassword');
   Route::post('reset/password','AuthController@resetPassword');
 
   // Route::post('verification','AuthController@sendVerification')->name('verification');

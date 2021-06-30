@@ -35,7 +35,7 @@
                     <div class=" text-uppercase">
                         <h2>If you have forgotten your password you can reset it here.</h2>
                         <div class="billing_form">
-                            <form action="{{url('user/forgotpassword')}}" method="POST">
+                            <form action="{{url('user/forgot/password')}}" method="POST">
                                 @csrf
                                 <div class="form-row  form-group">
                                     
