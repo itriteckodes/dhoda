@@ -176,8 +176,8 @@ button:hover {
     z-index: -1;
     bottom: auto;
     background: #00c6ff;
-    background: -webkit-linear-gradient(to right, #a0201e, #e67008);
-    background: linear-gradient(to right, #a0201e, #e67008);
+    background: -webkit-linear-gradient(to right, #704821, #b4641d);
+    background: linear-gradient(to right, #704821, #b4641d);
     top: 0;
     left: 0;
     width: 100%;
@@ -190,8 +190,8 @@ button:hover {
 
 .btn:hover,
 .btn:focus {
-    color: #a6302f;
-    border-color: #a6302f;
+    color: #b4641d;
+    border-color: #b4641d;
     outline: 0;
     background: #ffffff;
 }
@@ -281,7 +281,7 @@ button:hover {
     transform: translate(-50%, -50%);
     height: 0;
     width: 100%;
-    background: linear-gradient(to right, #a0201e, #e67008);
+    background: linear-gradient(to right, #633609, #c76612);
     visibility: hidden;
     opacity: 0;
     z-index: -1;
@@ -719,7 +719,7 @@ button:hover {
     padding: 5px 20px;
     text-transform: uppercase;
     font-weight: 600;
-    background: linear-gradient(to right, #a0201e, #e67008);
+    background: linear-gradient(to right, #704821, #b4641d);
     color: #fff;
     transition: all 0.3s;
     border-color: transparent;
