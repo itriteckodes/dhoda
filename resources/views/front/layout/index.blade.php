@@ -94,7 +94,7 @@
 
 						<div class="header-content">
 							<div class="header_contact text-right">
-								<span>Call Us!</span>
+								<span class="text-light">Call Us!</span>
 								<span class="phone_no"><a href="tel:{{$information->phone}}" class="text-white">{{$information->phone}}</a></span>
 							</div>
 							<div class="header_icon">
