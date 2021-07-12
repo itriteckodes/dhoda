@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="banner-content">
                     <h1>100% <span>Pure</span></h1>
-                    <h3>Fresh Sweets </h3>
+                    <h3 style="background-color: #b5651d">Fresh Sweets </h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
                     <a href="{{route('product.index')}}" class="btn ">ALL PRoducts <i class="icofont-bubble-right"></i></a>
@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="banner-content">
                     <h1>100% <span>Pure</span></h1>
-                    <h3>Fresh Sweet</h3>
+                    <h3 style="background-color: #b5651d">Fresh Sweet</h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
                     <a href="{{route('product.index')}}" class="btn">ALL PRoducts <i class="icofont-bubble-right"></i></a>
@@ -31,10 +31,10 @@
             <div class="col-md-12">
                 <div class="banner-content">
                     <h1>100% <span>Pure</span></h1>
-                    <h3>Fresh Sweet</h3>
+                    <h3 style="background-color: #b5651d">Fresh Sweet</h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
-                    <a href="{{route('product.index')}}" class="btn">ALL PRoducts <i class="icofont-bubble-right"></i></a>
+                    <a href="{{route('product.index')}}" class="btn" >ALL PRoducts <i class="icofont-bubble-right" ></i></a>
                 </div>
             </div>
         </div>
@@ -62,10 +62,10 @@
 
         <div class="row mt-5">
             @foreach(App\Models\Product::all()->take(12) as $product)
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div class="product">
                         <div class="product-img">
-                            <img class="w-100" src="{{asset($product->image)}}" alt=" {{$product->name}} image">
+                            <img  src="{{asset($product->image)}}" alt=" {{$product->name}} image">
                         </div>
                         <div class="product-content">
                             <div class="product-details position-bottom-left">

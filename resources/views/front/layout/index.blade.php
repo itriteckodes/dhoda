@@ -29,10 +29,10 @@
 </head>
 <body>
 	<!-- HEADER PART START -->
-	<header id="full_nav" >
+	<header id="full_nav"  >
 		<div class="header">
 			<div class="container">
-				<nav class="navbar navbar-expand-lg navbar-light">
+				<nav class="navbar navbar-expand-lg navbar-light" >
 					<a class="navbar-brand my-auto text-white" href="{{url('/')}}" style=" font-family: 'Poppins', 'Sans-serif';font-size:18px; font-weight:500">
 						{{-- <img src="{{ asset('front/img/logo.png') }}" alt=""> --}}
 						Amin Dhodha House
@@ -125,9 +125,19 @@
 							<h2>Contact Us!</h2>
 						</div>
 						<ul class="footer_widget_content">
-							<li><span>Phone: &nbsp;&nbsp;&nbsp;&nbsp;</span>{{$information->phone}}</li>
-							<li><span>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{$information->email}}</li>
-							<li><span>Address: &nbsp;</span> {{$information->address}}</li>
+							{{-- <div class="col-md-3">
+								<li>sadfdsf</li>
+								<li>sadfdsf</li>
+								<li>sadfdsf</li>
+							</div>
+							<div class="col-md-6" style="text-align: left">
+								<li>sadfdsf</li>
+								<li>sadfdsf</li>
+								<li>sadfdsf</li>
+							</div> --}}
+							<li><span style="font-size: 20px; color:white;">Phone: </span><small style="margin-left: 25px">{{$information->phone}}</small></li>
+							<li><span style="font-size: 20px; color:white;" >Email: <span><small style="margin-left: 30px;color:white">{{$information->email}}</small></li>
+							<li><span style="font-size: 20px; color:white;">Address: </span> <small style="margin-left: 8px">{{$information->address}}</small> </li>
 						</ul>
 
 						<div class="footer_social">

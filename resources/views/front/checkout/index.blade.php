@@ -63,23 +63,23 @@
                                         <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="10" placeholder="Note Of Order :"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-check mt-3">
+                                {{-- <div class="form-check mt-3">
                                     <input class="form-check-input" type="radio" name="payment_method" id="credit_card" value="cash_delivery" />
                                     <label class="form-check-label" for="credit_card">Cash On Delivery</label>
-                                </div> 
+                                </div>  --}}
                                 <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"/>
-                                    <label class="form-check-label" for="credit_card">Jazz Cash</label>
+                                       <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  /></span>
+                                       <span><img src="{{asset('images/payment_method/jazz2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div> 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa"/>
-                                    <label class="form-check-label" for="credit_card">Easypaisa</label>
+                                <div class="form-check mt-3 ml-3">
+                                   <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa"/></span> 
+                                   <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div> 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl"/>
-                                    <label class="form-check-label" for="credit_card">UBL</label>
+                                <div class="form-check mt-3 ml-3">
+                                   <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl"/></span> 
+                                   <span><img src="{{asset('images/payment_method/ubl2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div>
-                                <div class="chechout_btn text-left">
+                                <div class="chechout_btn text-left mt-3">
                                     <button type="submit" class="btn border-radius-0 border-transparent">Order Now</button>
                                 </div>
                             </form>

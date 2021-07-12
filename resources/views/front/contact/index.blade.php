@@ -35,9 +35,9 @@
                     <h2>Our Contact!</h2>
                     <br><br>
                     <ul class="footer_widget_content" >
-                        <li><span>Phone: &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: black">{{$information->phone}}</span></li>
-                        <li><span>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: black">{{$information->email}}</span></li>
-                        <li><span>Address: &nbsp;</span> <span style="color: black">{{$information->address}}</span></li>
+                        <li><span>Phone:</span><span style="color: black; margin-left: 25px">{{$information->phone}}</span></li>
+                        <li><span>Email:</span><span style="color: black;margin-left: 30px">{{$information->email}}</span></li>
+                        <li><span>Address:</span> <span style="color: black;margin-left: 10px">{{$information->address}}</span></li>
                     </ul>
 
                     <div class="footer_social">
