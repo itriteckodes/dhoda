@@ -439,8 +439,8 @@ button:hover {
     z-index: -1;
     bottom: auto;
     background: #00c6ff;
-    background: -webkit-linear-gradient(to right, #a0201e, #e67008);
-    background: linear-gradient(to right, #a0201e, #e67008);
+    background: -webkit-linear-gradient(to right, #b5651d, #b5651d);
+    background: linear-gradient(to right, #b5651d, #b5651d);
     top: 0;
     left: 0;
     width: 100%;
@@ -454,7 +454,7 @@ button:hover {
 .banner-content .btn:hover,
 .banner-content .btn:focus {
     color: #a6302f;
-    border-color: #a6302f;
+    border-color: #b5651d;
     outline: 0;
 }
 

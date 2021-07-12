@@ -9,7 +9,7 @@
         <div class="row banner-slider">
             <div class="col-md-12">
                 <div class="banner-content">
-                    <h1>100% <span>Pure</span></h1>
+                    <h1>100% <span style="color: #b5651d">Pure</span></h1>
                     <h3 style="background-color: #b5651d">Fresh Sweets </h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
@@ -19,7 +19,7 @@
 
             <div class="col-md-12">
                 <div class="banner-content">
-                    <h1>100% <span>Pure</span></h1>
+                    <h1>100% <span style="color: #b5651d">Pure</span></h1>
                     <h3 style="background-color: #b5651d">Fresh Sweet</h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
@@ -30,7 +30,7 @@
 
             <div class="col-md-12">
                 <div class="banner-content">
-                    <h1>100% <span>Pure</span></h1>
+                    <h1>100% <span style="color: #b5651d">Pure</span></h1>
                     <h3 style="background-color: #b5651d">Fresh Sweet</h3>
                     <p class="text-light">Here we provide best quality and fresh sweets
                     </p>
