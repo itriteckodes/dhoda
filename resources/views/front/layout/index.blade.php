@@ -136,7 +136,7 @@
 								<li>sadfdsf</li>
 							</div> --}}
 							<li><span style="font-size: 20px; color:white;">Phone: </span><small style="margin-left: 25px">{{$information->phone}}</small></li>
-							<li><span style="font-size: 20px; color:white;" >Email: <span><small style="margin-left: 30px;color:white">{{$information->email}}</small></li>
+							<li><span style="font-size: 21px; color:white;" >Email: <span><small style="margin-left: 30px;color:white">{{$information->email}}</small></li>
 							<li><span style="font-size: 20px; color:white;">Address: </span> <small style="margin-left: 8px">{{$information->address}}</small> </li>
 						</ul>
 
