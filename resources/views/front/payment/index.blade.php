@@ -22,9 +22,6 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                 <div class="order_content">
-                    @php
-                        $payment_method = 'easypaisa';
-                    @endphp
                     <div class="order_txt">
                         @if($payment_method=='jazz_cash')
                         <img src="{{asset('images/payment_method/jazz2.png')}}" alt="">

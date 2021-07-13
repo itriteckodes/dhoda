@@ -43,6 +43,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
                 //  dd(Auth::guard('user')->user());
                 if(Auth::guard('user')->user()==null){
                     $user_id = null;

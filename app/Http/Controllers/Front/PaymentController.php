@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Information;
 use App\Models\Order;
 use App\Models\Payment;
 use Illuminate\Http\Request;
@@ -52,11 +53,14 @@ class PaymentController extends Controller
                 'user_id' => $user_id,
                 'order_id' => $order->id
             ]+$request->all());
+            $order->restore();
             toastr()->success('Payment Successfull');
             return redirect('/');
         }else{
             toastr()->error('Sorry enter correct amount');
-            return redirect()->back();
+            $information = Information::find(1);
+            return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+            // return redirect()->back();
         }
        
     }
