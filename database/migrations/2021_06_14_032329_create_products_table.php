@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateProductsTable extends Migration
 {
@@ -17,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->longtext('detail'); 
+            $table->longtext('detail')->nullable(); 
             $table->integer('stock')->default(0); 
             $table->float('price')->nullable(); 
             $table->foreignId('category_id');

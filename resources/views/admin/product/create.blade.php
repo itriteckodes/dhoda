@@ -83,7 +83,7 @@
                         <div class="form-group col-md-12">
                             <label>Description</label>
                             <textarea class="form-control summernote" name="detail"
-                                required>{{ old('description') }} </textarea>
+                                >{{ old('description') }} </textarea>
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Create
