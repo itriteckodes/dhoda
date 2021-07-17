@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label>Description</label>
-                        <textarea class="form-control summernote"  id="description" name="detail" required>{{$product->detail}}</textarea>
+                        <textarea class="form-control summernote"  id="description" name="detail" >{{$product->detail}}</textarea>
                     </div>
                     <div class="text-right">
                         <button type="submit" class="btn btn-primary">Updated 
