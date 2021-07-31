@@ -1,5 +1,13 @@
 @extends('front.layout.index')
 @section('body')
+<style>
+    td{
+        border: 2px solid gray;
+    }
+    table{
+        border: 2px solid gray;
+    }  
+</style>
 <!-- HERO SECTION PART START -->
 <div class="hero_section">
     <div class="png_img"><img class="w-100 img-fluid" src="img/leaf.png" alt="" /></div>
@@ -59,11 +67,41 @@
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
                                         <input type="number" class="form-control border-radius-0" id="checkout_postalcode" name="postal_code"  placeholder="Zip/Postal Code" />
                                     </div>
+                                    
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                        <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="5" placeholder="Note Of Order :"></textarea>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                        <label for="transaaction id" class="text-dark">Transaction ID*</label>
                                         <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID *" required />
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
-                                        <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="10" placeholder="Note Of Order :"></textarea>
+                                        <table class="table ">
+                                            Accounts Details
+                                            <thead>
+                                                <tr>
+                                                    <th>Account Title</th>
+                                                    <th>Account No.</th>
+                                                    <th>Branch Code</th>
+                                                </tr>
+                                                
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Hamza Amin (Jazz Cash)</td>
+                                                    <td>03124202369</td>
+                                                    <td>----</td>
+                                                </tr><tr>
+                                                    <td>Hamza Amin (Easypaisa)</td>
+                                                    <td>03124202369</td>
+                                                    <td>----</td>
+                                                </tr><tr>
+                                                    <td>Hamza Amin (UBL)</td>
+                                                    <td>275557072</td>
+                                                    <td>0338</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 {{-- <div class="form-check mt-3">
@@ -73,14 +111,21 @@
                                 <div class="form-check mt-3">
                                        <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  required/></span>
                                        <span><img src="{{asset('images/payment_method/jazz2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
+                                       <small style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</small>
                                 </div> 
                                 <div class="form-check mt-3 ml-3">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa" required/></span> 
-                                   <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
+                                   <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px;"></span>
+                                   {{-- <p style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</p> --}}
+                                   <ul class="text-dark list-feed-solid">
+                                       <li>Account Holder: Hamza Amin</li>
+                                       <li>Account No: 03124202369</li>
+                                   </ul>
                                 </div> 
                                 <div class="form-check mt-3 ml-3">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl" required/></span> 
                                    <span><img src="{{asset('images/payment_method/ubl2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
+                                   <small style="margin-left: 30px; font-size:15px">Hamza Amin(Account No: 275557072,Branch code: 0338)</small>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">
                                     <button type="submit" class="btn border-radius-0 border-transparent">Order Now</button>
