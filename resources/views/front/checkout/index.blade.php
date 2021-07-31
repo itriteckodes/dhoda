@@ -75,7 +75,7 @@
                                         <label for="transaaction id" class="text-dark">Transaction ID*</label>
                                         <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID *" required />
                                     </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                    {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                                         <table class="table ">
                                             Accounts Details
                                             <thead>
@@ -102,7 +102,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 {{-- <div class="form-check mt-3">
                                     <input class="form-check-input" type="radio" name="payment_method" id="credit_card" value="cash_delivery" />
@@ -111,21 +111,29 @@
                                 <div class="form-check mt-3">
                                        <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  required/></span>
                                        <span><img src="{{asset('images/payment_method/jazz2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
-                                       <small style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</small>
-                                </div> 
+                                       {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</small> --}}
+                                       <ul class="text-dark ml-3 ">
+                                        <li>Account Holder: Hamza Amin</li>
+                                        <li class="mt-3">Account No: 03124202369</li>
+                                       </ul>
+                                    </div> 
                                 <div class="form-check mt-3 ml-3">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa" required/></span> 
                                    <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px;"></span>
                                    {{-- <p style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</p> --}}
-                                   <ul class="text-dark list-feed-solid">
+                                   <ul class="text-dark ">
                                        <li>Account Holder: Hamza Amin</li>
-                                       <li>Account No: 03124202369</li>
+                                       <li class="mt-3">Account No: 03124202369</li>
                                    </ul>
                                 </div> 
                                 <div class="form-check mt-3 ml-3">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl" required/></span> 
                                    <span><img src="{{asset('images/payment_method/ubl2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
-                                   <small style="margin-left: 30px; font-size:15px">Hamza Amin(Account No: 275557072,Branch code: 0338)</small>
+                                   {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin(Account No: 275557072,Branch code: 0338)</small> --}}
+                                   <ul class="text-dark ">
+                                    <li>Account Holder: Hamza Amin</li>
+                                    <li class="mt-3">Account No: 275557072</li>
+                                  </ul>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">
                                     <button type="submit" class="btn border-radius-0 border-transparent">Order Now</button>
