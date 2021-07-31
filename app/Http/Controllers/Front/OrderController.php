@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Information;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Models\Payment;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,7 +51,6 @@ class OrderController extends Controller
                 }else{
                    $user_id = Auth::guard('user')->user()->id;
                    $user = Auth::guard('user')->user();
-                   $user->e_wallet = $user->e_wallet+$request->amount;
                    $user->update();
                 }
         
@@ -81,19 +81,24 @@ class OrderController extends Controller
                     // }); 
                 // toastr()->success('Please check your email for code to track your order');
                         $information = Information::find(1);
+                        Payment::create([
+                            'user_id' => $user_id,
+                            'order_id' => $order->id,
+                            'amount' => $order->amount
+                        ]+$request->all());
                 
-                if($request->payment_method == 'jazz_cash'){
-                    $order->delete();
-                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
-                }
-                if($request->payment_method == 'easypaisa'){
-                    $order->delete();
-                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
-                }
-                if($request->payment_method == 'ubl'){
-                    $order->delete();
-                    return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
-                }
+                // if($request->payment_method == 'jazz_cash'){
+                //     $order->delete();
+                //     return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                // }
+                // if($request->payment_method == 'easypaisa'){
+                //     $order->delete();
+                //     return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                // }
+                // if($request->payment_method == 'ubl'){
+                //     $order->delete();
+                //     return view('front.payment.index')->with('order',$order)->with('payment_method',$request->payment_method)->with('information',$information);
+                // }
 
 
                 toastr()->success('Order Placed Successfully');

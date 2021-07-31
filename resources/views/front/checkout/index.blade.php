@@ -30,34 +30,37 @@
                                 @csrf
                                 <div class="form-row ">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control " name="name"  placeholder="Name*" required/>
+                                        <input type="text" class="form-control " name="name"  placeholder="Name *" required/>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="email" class="form-control border-radius-0" id="checkout_email" name="email"  placeholder="Email*" required/>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="number" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number" required />
+                                        <input type="email" class="form-control border-radius-0" id="checkout_email" name="email"  placeholder="Email *" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_country" name="country"  placeholder="Country" required />
+                                        <input type="number" class="form-control border-radius-0" id="checkout_phonenumber" name="phone"  placeholder="Phone Number *" required />
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_state" name="district"  placeholder="State/Disctrict" required/>
+                                        <input type="text" class="form-control border-radius-0" id="checkout_country" name="country"  placeholder="Country *" required />
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="city" placeholder="City:" required/>
+                                        <input type="text" class="form-control border-radius-0" id="checkout_state" name="district"  placeholder="State/Disctrict *" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address:" required/>
+                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="city" placeholder="City *" required/>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                                        <input type="text" class="form-control border-radius-0" id="checkout_address" name="address"  placeholder="Address *" required/>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
                                         <input type="number" class="form-control border-radius-0" id="checkout_postalcode" name="postal_code"  placeholder="Zip/Postal Code" />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                        <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID *" required />
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                                         <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="10" placeholder="Note Of Order :"></textarea>
@@ -68,15 +71,15 @@
                                     <label class="form-check-label" for="credit_card">Cash On Delivery</label>
                                 </div>  --}}
                                 <div class="form-check mt-3">
-                                       <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  /></span>
+                                       <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  required/></span>
                                        <span><img src="{{asset('images/payment_method/jazz2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div> 
                                 <div class="form-check mt-3 ml-3">
-                                   <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa"/></span> 
+                                   <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa" required/></span> 
                                    <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div> 
                                 <div class="form-check mt-3 ml-3">
-                                   <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl"/></span> 
+                                   <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl" required/></span> 
                                    <span><img src="{{asset('images/payment_method/ubl2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">

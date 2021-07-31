@@ -23,7 +23,7 @@ class CreatePaymentsTable extends Migration
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->double('amount');
             $table->string('status')->default('pending');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
