@@ -80,12 +80,13 @@ class OrderController extends Controller
                     //     ->subject('Order tracking code');
                     // }); 
                 // toastr()->success('Please check your email for code to track your order');
-                        $information = Information::find(1);
-                        Payment::create([
-                            'user_id' => $user_id,
-                            'order_id' => $order->id,
-                            'amount' => $order->amount
-                        ]+$request->all());
+                if($request->payment_metho!='delivery'){
+                    Payment::create([
+                        'user_id' => $user_id,
+                        'order_id' => $order->id,
+                        'amount' => $order->amount
+                    ]+$request->all());
+                }
                 
                 // if($request->payment_method == 'jazz_cash'){
                 //     $order->delete();
