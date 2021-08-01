@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="form-check mt-3 ">
                                     <input class="form-check-input" type="radio" name="payment_method" id="cash_delivery" value="cash_delivery" />
-                                    <label class="form-check-label" for="credit_card">Cash On Delivery</label>
+                                    <label class="form-check-label text-dark" for="credit_card">Cash On Delivery</label>
                                 </div> 
                                 {{-- <div class="form-check mt-3 ml-3">
                                     <span class="text-dark"><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="delivery" required/>Cash On Delivery</span> 
