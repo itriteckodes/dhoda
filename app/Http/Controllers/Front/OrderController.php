@@ -80,7 +80,7 @@ class OrderController extends Controller
                     //     ->subject('Order tracking code');
                     // }); 
                 // toastr()->success('Please check your email for code to track your order');
-                if($request->payment_metho!='delivery'){
+                if($request->payment_method!='cash_delivery'){
                     Payment::create([
                         'user_id' => $user_id,
                         'order_id' => $order->id,

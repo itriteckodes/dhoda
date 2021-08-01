@@ -72,8 +72,8 @@
                                         <textarea class="form-control border-radius-0" id="checkout_billing_textarea" name="note" rows="5" placeholder="Note Of Order :"></textarea>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
-                                        <label for="transaaction id" class="text-dark">Transaction ID*</label>
-                                        <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID *" required />
+                                        <label for="transaaction id" class="text-dark transaction_id">Transaction ID</label>
+                                        <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID" />
                                     </div>
                                     {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                                         <table class="table ">
@@ -104,24 +104,24 @@
                                         </table>
                                     </div> --}}
                                 </div>
-                                {{-- <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="payment_method" id="credit_card" value="cash_delivery" />
+                                <div class="form-check mt-3 ">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="cash_delivery" value="cash_delivery" />
                                     <label class="form-check-label" for="credit_card">Cash On Delivery</label>
-                                </div>  --}}
+                                </div> 
                                 {{-- <div class="form-check mt-3 ml-3">
                                     <span class="text-dark"><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="delivery" required/>Cash On Delivery</span> 
                                 </div> --}}
                                 <div class="form-check mt-3">
-                                       <span> <input  type="radio" name="payment_method" id="jazz_cash" value="jazz_cash"  required/></span>
+                                       <span> <input  type="radio" name="payment_method" class="form-check-input" id="jazz_cash" value="jazz_cash"  required/></span>
                                        <span><img src="{{asset('images/payment_method/jazz2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                        {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</small> --}}
                                        <ul class="text-dark ml-3 ">
                                         <li>Account Holder: Hamza Amin</li>
                                         <li class="mt-3">Account No: <span class="text-primary">03124202369</span> </li>
                                        </ul>
-                                    </div> 
+                                </div> 
                                     
-                                <div class="form-check mt-3 ml-3">
+                                <div class="form-check mt-3 ">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="easypaisa"  value="easypaisa" required/></span> 
                                    <span><img src="{{asset('images/payment_method/easypaisa.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px;"></span>
                                    {{-- <p style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</p> --}}
@@ -130,7 +130,7 @@
                                        <li class="mt-3">Account No: <span class="text-primary">03124202369</span> </li>
                                    </ul>
                                 </div> 
-                                <div class="form-check mt-3 ml-3">
+                                <div class="form-check mt-3 ">
                                    <span><input class="form-check-input" type="radio" name="payment_method" id="ubl"  value="ubl" required/></span> 
                                    <span><img src="{{asset('images/payment_method/ubl2.png')}}" alt="" style="height: 70px; width:100px; margin-left:10px"></span>
                                    {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin(Account No: 275557072,Branch code: 0338)</small> --}}
@@ -384,4 +384,23 @@
             </div>
         </div>
         @endif --}}
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $('.form-check-input').on('click',function(){
+                // alert('hiii');
+                let value = $(this).val();
+                if(value=='cash_delivery'){
+                    $('#transaction_id').prop('required',false);
+                    $('.transaction_id').html('Transaction ID');
+
+                }else{
+                    $('#transaction_id').prop('required',true);
+                    $('.transaction_id').html('Transaction ID *');
+                }
+                // if($(this).is(':checked')) alert('checked'); else alert('unchecked'); 
+            });
+        });
+    </script>
 @endsection
