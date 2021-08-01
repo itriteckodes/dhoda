@@ -117,7 +117,7 @@
                                        {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</small> --}}
                                        <ul class="text-dark ml-3 ">
                                         <li>Account Holder: Hamza Amin</li>
-                                        <li class="mt-3">Account No: <span class="text-primary">03124202369</span> </li>
+                                        <li class="mt-3">Account No: <span class="text-dark">03124202369</span> </li>
                                        </ul>
                                 </div> 
                                     
@@ -127,7 +127,7 @@
                                    {{-- <p style="margin-left: 30px; font-size:15px">Hamza Amin (Account No:03124202369)</p> --}}
                                    <ul class="text-dark ">
                                        <li>Account Holder: Hamza Amin</li>
-                                       <li class="mt-3">Account No: <span class="text-primary">03124202369</span> </li>
+                                       <li class="mt-3">Account No: <span class="text-dark">03124202369</span> </li>
                                    </ul>
                                 </div> 
                                 <div class="form-check mt-3 ">
@@ -136,7 +136,7 @@
                                    {{-- <small style="margin-left: 30px; font-size:15px">Hamza Amin(Account No: 275557072,Branch code: 0338)</small> --}}
                                    <ul class="text-dark ">
                                     <li>Account Holder: Hamza Amin</li>
-                                    <li class="mt-3">Account No: <span class="text-primary">275557072</span> </li>
+                                    <li class="mt-3">Account No: <span class="text-dark">275557072</span> </li>
                                   </ul>
                                 </div>
                                 <div class="chechout_btn text-left mt-3">
