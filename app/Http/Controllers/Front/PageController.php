@@ -21,8 +21,23 @@ class PageController extends Controller
 {
     public function home()
     {
+        $products=Product::all()->take(12);
         $information = Information::find(1);
-        return view('front.home.index',compact('information'));
+        foreach ($products as $key => $product) {
+            $reviews=$product->reviews;
+            $sum=0;
+            $avg=0;
+            $count=0;
+            if(count($reviews)>0){
+                foreach ($reviews as $key => $review) {
+                    $sum=$sum+$review->rating;
+                    $count=$count+1;
+                }
+            }
+            $avg =round($sum/($count>0?$count:'1'));
+            $product->avg=$avg;
+        }
+        return view('front.home.index',compact('information','products'));
     }
     public function blog()
     {
@@ -61,17 +76,44 @@ class PageController extends Controller
     }
     public function products()
     {
+        
         $products = Product::paginate(20);
         $information = Information::find(1);
-        return view('front.product.index',compact('products','information'));
+
+        foreach ($products as $key => $product) {
+            $reviews=$product->reviews;
+            $sum=0;
+            $avg=0;
+            $count=0;
+            if(count($reviews)>0){
+                foreach ($reviews as $key => $review) {
+                    $sum=$sum+$review->rating;
+                    $count=$count+1;
+                }
+            }
+            $avg =round($sum/($count>0?$count:'1'));
+            $product->avg=$avg;
+        }
+        return view('front.product.index',compact('products','information','avg'));
     }
     public function showProductNext($name)
     {
-        $products = Product::where('name',str_replace('_', ' ',$name))->first();
-        $id = $products->id;
+        $product = Product::where('name',str_replace('_', ' ',$name))->first();
+        $id = $product->id;
         $product = Product::find($id);
         $information = Information::find(1);
-        return view('front.product.show',compact('product','information'));
+       $reviews=$product->reviews;
+       $sum=0;
+       $avg=0;
+       $count=0;
+       if(count($reviews)>0){
+        foreach ($reviews as $key => $review) {
+            $sum=$sum+$review->rating;
+            $count=$count+1;
+        }
+       }
+       $avg =round($sum/($count>0?$count:'1'));
+        return view('front.product.show',compact('product','information','avg'));
     }  
     public function productcategory()
     {

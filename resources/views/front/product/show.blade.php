@@ -1,7 +1,7 @@
 @extends('front.layout.index')
 @section('title')
     <title>{{ $product->name }} - Amin Dhoda House</title>
-    <meta name="description" content="{{$product->description}}">
+    <meta name="description" content="{{ $product->description }}">
 
     <!--Keywords -->
     <meta name="keywords"
@@ -35,16 +35,18 @@
                     <div class="product_img d-flex">
                         <div class="small_img">
                             <a href="#">
-                            <img class="w-100 smallImage im0" src="{{ asset($product->image) }}" alt="relatedf image">
+                                <img class="w-100 smallImage im0" src="{{ asset($product->image) }}" alt="relatedf image">
                             </a>
                             @foreach ($product->images as $key => $ProductImage)
-                            <a href="#">
-                             <img class="w-100 smallImage im{{$key+1}}" src="{{ asset($ProductImage->image) }}" alt="related image">
-                            </a>
-                             @endforeach
+                                <a href="#">
+                                    <img class="w-100 smallImage im{{ $key + 1 }}"
+                                        src="{{ asset($ProductImage->image) }}" alt="related image">
+                                </a>
+                            @endforeach
                         </div>
                         <div class="big_img">
-                           <a href="{{ asset($product->image) }}"><img src="{{ asset($product->image) }}" class="w-100 img-fluid largeImage" alt="product image" /></a> 
+                            <a href="{{ asset($product->image) }}"><img src="{{ asset($product->image) }}"
+                                    class="w-100 img-fluid largeImage" alt="product image" /></a>
                         </div>
                     </div>
                 </div>
@@ -52,9 +54,13 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="producudetails_content">
                         <h3>{{ $product->name }}</h3>
-
-                        <strong>PKR {{ $product->price }} </strong>
+                        <strong>PKR {{ $product->price }} </strong><br>
+                        @for ($i = 0; $i < $avg; $i++)
+                        <i class="icofont icofont-star"></i>
+                        @endfor{{$avg}}/5
+                        
                         <p>{!! $product->detail !!}</p>
+                        
                         <div class="add_to_cart d-flex">
                             <a href="#" class="btn border-transparent cart-add" id="{{ $product->id }}">Add to
                                 cart</a>
@@ -62,6 +68,85 @@
                                 Now</a>
                         </div>
                     </div>
+                </div>
+                <hr style="border: 1px solid grey; width:100%">
+                <div class="blog_details">
+
+                    <div class="blog_form mt-4">
+                        <strong>Give Review</strong>
+                        <form action="{{ route('review.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" name="product_id" id="" value="{{ $product->id }}">
+                            <div class="form-row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                                    <input type="text" class="form-control border-radius-0" id="name" name="name" value=""
+                                        placeholder="Name*:" required />
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                                    <input type="text" class="form-control border-radius-0" id="city" name="city" value=""
+                                        placeholder="City*:" required />
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                                    <input type="email" class="form-control border-radius-0" id="email" name="email"
+                                        value="" placeholder="Email:[optional]" />
+                                </div>
+
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                                    <select name="rating" id="" class="form-control border-radius-0" required>
+                                        <option value="" selected disabled>Select Ratting*</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                    <textarea class="form-control border-radius-0" id="message:" name="message" rows="3"
+                                        placeholder="Message*:" required></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn border-radius-0 mt-4">Submit Comment</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="details_comment container  mt-5">
+                <strong>Reviews({{count($product->reviews)}})</strong>
+                @php
+                    $reviews=App\Models\Review::where('product_id',$product->id)->paginate(20);
+                @endphp
+                @foreach ($reviews as $review)
+
+                    <div class="card row col-md-7 col-sm-7 mt-3 ">
+                        <div class="col-md-12 col-sm-12 text-dark">
+                            <strong>{{ $review->name }} <br /></strong>
+                            <p><b>City:</b> {{ $review->city }} <br /></p>
+                            <span><b>Dated:</b> {{ Carbon\Carbon::parse($review->created_at)->format('d M,Y') }}</span><br>
+                            <span class="text-warning"><b>Ratting:</b>
+                                @for ($i = 0; $i < $review->rating; $i++)
+                                    <i class="icofont icofont-star"></i>
+                                @endfor
+                                {{ $review->rating }}/5
+                            </span>
+                        </div>
+                        <div class="col-md-12 col-sm-12 ">
+
+                            <p>
+                                <b>Message: </b> {{ $review->message }}
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+                <div class=" details_comment container mt-3">
+                    {{ $reviews->links() }}
                 </div>
             </div>
         </div>
@@ -180,22 +265,22 @@
                     }
                 });
             });
-            $('.smallImage').on('click',function(e){
+            $('.smallImage').on('click', function(e) {
                 e.preventDefault();
                 let smallsrc = $(this).attr('src');
                 let largesrc = $('.largeImage').attr('src');
-                $('.largeImage').attr('src',smallsrc);
+                $('.largeImage').attr('src', smallsrc);
             });
-            let dat =  {!!json_encode($product->images) !!};
-            let i=0;
-          console.log(dat);
+            let dat = {!! json_encode($product->images) !!};
+            let i = 0;
+            console.log(dat);
             setInterval(function() {
-                if(i>dat.length){
-                    i=0;
+                if (i > dat.length) {
+                    i = 0;
                 }
-             $('.im'+i).click();  
-                i=i+1;
-             }, 3000); 
+                $('.im' + i).click();
+                i = i + 1;
+            }, 3000);
         });
     </script>
 

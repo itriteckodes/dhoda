@@ -1,7 +1,7 @@
 @extends('admin.layout.index')
 
 @section('title')
-    Orders List
+    Reviews List
 @endsection
 
 @section('content')
@@ -11,40 +11,29 @@
         <thead>
             <tr>
                 <th>SR#</th>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Quantity</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>Review Date</th>
+                <th>User Name</th>
+                <th>Product Name</th>
+                <th>User City</th>
+                <th>User Email</th>
+                <th>Rating</th>
+                <th>Review</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($orders as $key => $order)
+            @foreach ($reviews as $key => $review)
             <tr >
                 <td>{{ $key+1 }}</td>
-                <td>{{ $order->created_at->format('d-M-y') }}</td>
-                <td>{{ $order->name }}</td>
-                <td>{{ $order->email }}</td>
-                <td>{{ $order->phone }}</td>
-                <td>{{ $order->qty }}</td>
-                <td>{{ $order->amount }}</td>
-                @if ($order->status=='pending')
+                <td>{{ $review->created_at->format('d-M-y') }}</td>
+                <td>{{ $review->name }}</td>
+                <td>{{ $review->product->name }}</td>
+                <td>{{ $review->city }}</td>
+                <td>{{ $review->email }}</td>
+                <td>{{ $review->rating }}</td>
+                <td>{{ $review->message }}</td>
                 <td>
-                    <p><span class="badge badge-warning">Pending</span></p>
-                </td>
-                @endif
-                @if ($order->status=='completed')
-                <td>
-                    <p><span class="badge badge-success">Completed</span> </p>
-                </td>
-                @endif
-                <td><a href="{{ route('admin.order.show',$order->id) }}" class="btn btn-primary">Show</a></td>
-                <td>
-                    <button type="button" class="btn btn-sm btn btn-danger deleteBtn" data-toggle="modal" data-target="#delete_modal" id="{{$order->id}}" title="Click to Delete">
+                    <button type="button" class="btn btn-sm btn btn-danger deleteBtn" data-toggle="modal" data-target="#delete_modal" id="{{$review->id}}" title="Click to Delete">
                         Delete
                     </button>
                 </td>
@@ -91,7 +80,7 @@
         $('body').on('click', '.deleteBtn', function(){
             let id = $(this).attr('id');
             $('#id').val(id);
-            $('#deleteForm').attr('action','{{route('admin.order.destroy','')}}' +'/'+id);
+            $('#deleteForm').attr('action','{{route('admin.review.destroy','')}}' +'/'+id);
         });
 
     });

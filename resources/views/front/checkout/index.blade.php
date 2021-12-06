@@ -1,4 +1,5 @@
 @extends('front.layout.index')
+
 @section('body')
 <style>
     td{
@@ -75,6 +76,8 @@
                                         <label for="transaaction id" class="text-dark transaction_id">Transaction ID</label>
                                         <input type="text" class="form-control border-radius-0" id="transaction_id" name="transaction_id"  placeholder="Enter Transaction ID" />
                                     </div>
+
+                                    <input type="hidden" name="alert" value="yes" id="">
                                     {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
                                         <table class="table ">
                                             Accounts Details
@@ -386,6 +389,7 @@
         @endif --}}
 @endsection
 @section('script')
+
     <script>
         $(document).ready(function(){
             $('.form-check-input').on('click',function(){

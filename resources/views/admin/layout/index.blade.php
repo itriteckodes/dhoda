@@ -50,12 +50,15 @@
 
 	<script src="{{asset('admin/global_assets/js/demo_pages/job_list.js')}}"></script>
 	<!-- /theme JS files -->
+<style>
 
+::ng-deep #toast-container > div {
+  width: 100000px !important;
+}
+</style>
 	@yield('styles')
 </head>
-
 <body>
-
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">

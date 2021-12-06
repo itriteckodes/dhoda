@@ -16,11 +16,12 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('p_name');
-            $table->integer('amount');
-            $table->integer('star');
+            $table->string('city');
+            $table->foreignId('product_id');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->string('email')->nullable();
+            $table->integer('rating');
             $table->text('message');
-            $table->string('image');
             $table->timestamps();
         });
     }

@@ -61,16 +61,30 @@
         </div>
 
         <div class="row mt-5">
-            @foreach(App\Models\Product::all()->take(12) as $product)
+            @foreach($products as $product)
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div class="product">
                         <div class="product-img">
                             <img  src="{{asset($product->image)}}" alt=" {{$product->name}} image">
                         </div>
-                        <div class="product-content">
+                        <div class="product-content mt-2">
                             <div class="product-details position-bottom-left">
                                 <h3 class="product-name"><a href="{{route('product.show',str_replace(' ', '_',$product->name))}}">{{$product->name}}</a></h3>
                                 {{-- <span class="product-prev-price">$80 KG</span> --}}
+                                <span class="text-warning">
+                                    @if ($product->avg==0)
+                                    @for ($i = 0; $i < 5; $i++)
+                                    <i class="icofont icofont-star"></i>
+                                   @endfor
+                                  5/5
+                                    @else
+                                    @for ($i = 0; $i < $product->avg; $i++)
+                                    <i class="icofont icofont-star"></i>
+                                @endfor
+                                {{ $product->avg }}/5
+                                    @endif
+                                      
+                                   </span><br>
                                 <span class="product-price">PKR {{$product->price}}</span>
                             </div>
                             <div class="buttons">
@@ -250,8 +264,19 @@
 @endsection
 
 @section('script')
+{{-- <script>
+    document.querySelector(".first").addEventListener('click', function(){
+    Swal.fire("Order Placed Successfully");
+    });
+</script> --}}
     <script>
       $(document).ready(function(){
+        var a = {!! json_encode(old('alert')) !!}
+        if(a=='yes'){
+            Swal.fire("Order Placed Successfully");
+        }
+        
+        
         $('.addcart-item').click(function(e){   
             e.preventDefault();
             let id = $(this).attr('id');

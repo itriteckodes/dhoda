@@ -9,10 +9,14 @@ class Review extends Model
 {
     use HasFactory; 
 
-    // protected $fillable = [
-    //     'name', 'p_name','amount','star','message','image'
-    // ];
+    protected $fillable = [
+        'name','city', 'email','message','rating','product_id'
+    ];
     // public function setImageAttribute($value){
     //     $this->attributes['image'] = ImageHelper::saveRImage($value,'/profile/');
     // }
+
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id');
+    }
 }

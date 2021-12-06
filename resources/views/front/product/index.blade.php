@@ -39,11 +39,26 @@
                     <div class="product-img">
                         <img class="w-100" src="{{asset($product->image)}}" alt="">
                     </div>
-                    <div class="product-content">
+                    <div class="product-content mt-2">
                         <div class="product-details position-bottom-left">
                             <h3 class="product-name"><a href="{{route('product.show',str_replace(' ', '_',$product->name))}}">{{$product->name}}</a></h3>
                             {{-- <span class="product-prev-price"></span> --}}
-                            <span class="product-price">PKR {{$product->price}}</span>
+                            <span class="text-warning">
+                             @if ($product->avg==0)
+                             @for ($i = 0; $i < 5; $i++)
+                             <i class="icofont icofont-star"></i>
+                            @endfor
+                           5/5
+                             @else
+                             @for ($i = 0; $i < $product->avg; $i++)
+                             <i class="icofont icofont-star"></i>
+                         @endfor
+                         {{ $product->avg }}/5
+                             @endif
+                               
+                            </span><br>
+                            <span class="product-price">PKR {{$product->price}}</span><br>
+                            
                         </div>
                         <div class="buttons">
                             <button class="btn custom-btn position-bottom-right addcart-item" id="{{$product->id}}"> Add to cart</button>

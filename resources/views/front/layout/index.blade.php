@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="{{ asset('front/css/style.css') }}" />
 	<!-- Responsive css-->
 	<link rel="stylesheet" href="{{ asset('front/css/responsive.css') }}" />
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 	<link rel="stylesheet" href="{{asset('toastr/toastr.min.css')}}">
 </head>
 <body>
@@ -438,6 +439,7 @@
 		});
 		
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 	<script src="{{asset('toastr/toastr.min.js')}}"></script>
 	@toastr_render
 @yield('script')

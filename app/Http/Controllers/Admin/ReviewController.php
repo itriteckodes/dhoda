@@ -13,9 +13,14 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.review.index');
+        if($request->get('type')==null){
+            $reviews=Review::all();
+        }else{
+           $reviews=Review::whereDate('created_at', date('Y-m-d'))->get();
+        }
+        return view('admin.reviews.index')->with('reviews',$reviews);
     } 
 
     /**
@@ -36,9 +41,9 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        $review = Review::create($request->all());
-        toastr()->success('Review Added successfully');
-        return redirect()->back();
+        // $review = Review::create($request->all());
+        // toastr()->success('Review Added successfully');
+        // return redirect()->back();
     }
 
     /**
@@ -72,9 +77,9 @@ class ReviewController extends Controller
      */
     public function update(Request $request, Review $review)
     {
-        $review->update($request->all());
-        toastr()->success('Review Informations Updated successfully');
-        return redirect()->back();
+        // $review->update($request->all());
+        // toastr()->success('Review Informations Updated successfully');
+        // return redirect()->back();
     }
 
     /**

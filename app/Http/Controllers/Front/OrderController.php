@@ -102,8 +102,8 @@ class OrderController extends Controller
                 // }
 
 
-                toastr()->success('Order Placed Successfully');
-                return redirect('/');
+                // toastr()->success('Order Placed Successfully');
+                return redirect('/')->withInput();;
     }
 
     /**

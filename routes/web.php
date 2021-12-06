@@ -57,6 +57,7 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'App\Http\Contr
         Route::resource('order','OrderController');
         Route::resource('productImage','ProductImageController');
         Route::resource('gallery','GalleryImageController');
+        Route::resource('review','ReviewController');
 
         // Route::
       
@@ -141,6 +142,7 @@ Route::post('order/tracking','Front\OrderController@trackOrder')->name('order.tr
 Route::resource('order','Front\OrderController');
 Route::resource('comment','Front\CommentController');
 Route::resource('payment','Front\PaymentController');
+Route::resource('review','Front\ReviewController');
 
 Route::get('transaction',function(){
   $information = Information::find(1);

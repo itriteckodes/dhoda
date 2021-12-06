@@ -43,5 +43,6 @@ return [
         'timeOut'           => 5000,
         'titleClass'        => 'toast-title',
         'toastClass'        => 'toast',
+        
     ],
 ];
