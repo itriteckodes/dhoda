@@ -201,7 +201,7 @@
               },
               success:function(response){
                  if(response.error){
-                    toastr.error("Item out of Stock!");
+                    Swal.fire("Product out of stock");
                     qty=$('#spec'+id).html();
                     $('#spec'+id).html(qty);
                  } else {
@@ -242,7 +242,8 @@
       }
        function removeFromView(id,response){
           $('.p'+id).remove();
-           toastr.warning('Item removed from cart')
+          Swal.fire("Product removed from cart");
+        //    toastr.warning('Item removed from cart')
           if (response.cart == null) location.reload();
        }
   });

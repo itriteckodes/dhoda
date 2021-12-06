@@ -61,6 +61,7 @@ class OrderController extends Controller
                      'qty' =>Session::get('cart')['qty'],
                      'amount'=>$amount
                  ]+$request->all());
+
                  foreach(Cart::products() as $product){
                      OrderItem::create([
                          'product_id' => $product->id,
@@ -87,6 +88,7 @@ class OrderController extends Controller
                         'amount' => $order->amount
                     ]+$request->all());
                 }
+                
                 
                 // if($request->payment_method == 'jazz_cash'){
                 //     $order->delete();

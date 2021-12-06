@@ -84,10 +84,15 @@
                                 {{ $product->avg }}/5
                                     @endif
                                       
-                                   </span><br>
+                                   </span> 
+                                   @if ($product->stock==0)
+                                   <small class="badge badge-danger" style="margin-left: 30px">Out of stock</small>
+                                   @else
+                                   <small class="badge badge-success" style="margin-left: 30px">Available</small>
+                                   @endif  <br>
                                 <span class="product-price">PKR {{$product->price}}</span>
                             </div>
-                            <div class="buttons">
+                            <div class="buttons mt-5">
                                 <button class="btn custom-btn position-bottom-right add-to-cart-btn addcart-item" id="{{$product->id}}"> Add to cart</button>
                             </div>
 
@@ -276,8 +281,11 @@
             Swal.fire("Order Placed Successfully");
         }
         
-        
-        $('.addcart-item').click(function(e){   
+        let stock=$(this).attr('stock');
+            if(stock==0){
+                Swal.fire("Product out of stock");
+            }else{
+                $('.addcart-item').click(function(e){   
             e.preventDefault();
             let id = $(this).attr('id');
             $.ajax({
@@ -286,14 +294,17 @@
                 data : {id :id},
                 success:function(response){
                     if(response.error){
-                        toastr.warning('Item Out of Stock');  
+                        Swal.fire("Product out of stock");
                     } else {
-                        toastr.success('Item Added to Cart');
+                        Swal.fire("Product Added to Cart");
                         $('#cartValue').html(response.qty);
                     }
                 }
             });
         }); 
+            }
+        
+        
       });
     </script>
 @endsection

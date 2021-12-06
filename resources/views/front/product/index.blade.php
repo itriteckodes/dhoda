@@ -56,12 +56,16 @@
                          {{ $product->avg }}/5
                              @endif
                                
-                            </span><br>
+                            </span>  @if ($product->stock==0)
+                            <small class="badge badge-danger" style="margin-left: 30px">Out of stock</small>
+                            @else
+                            <small class="badge badge-success" style="margin-left: 30px">Available</small>
+                            @endif<br>
                             <span class="product-price">PKR {{$product->price}}</span><br>
                             
                         </div>
                         <div class="buttons">
-                            <button class="btn custom-btn position-bottom-right addcart-item" id="{{$product->id}}"> Add to cart</button>
+                            <button class="btn custom-btn position-bottom-right addcart-item" stock="{{$product->stock}}" id="{{$product->id}}"> Add to cart</button>
                         </div>
 
                         <div class="icons position-center">
@@ -287,20 +291,27 @@
           
         $('.addcart-item').click(function(e){   
             e.preventDefault();
-            let id = $(this).attr('id');
+            let stock=$(this).attr('stock');
+            if(stock==0){
+                Swal.fire("Product out of stock");
+            }else{
+                let id = $(this).attr('id');
             $.ajax({
                 url : "{{url('cart/add')}}",
                 method : "POST",
                 data : {id :id},
                 success:function(response){
+                    console.log(response);
                     if(response.error){
-                        toastr.warning('Item Out of Stock');  
+                        Swal.fire("Product out of stock"); 
                     } else {
-                        toastr.success('Item Added to Cart');
+                        Swal.fire("Product Added to Cart");
                         $('#cartValue').html(response.qty);
                     }
                 }
             });
+            }
+          
         }); 
       });
     </script>

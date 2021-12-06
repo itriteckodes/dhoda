@@ -58,6 +58,11 @@
                         @for ($i = 0; $i < $avg; $i++)
                         <i class="icofont icofont-star"></i>
                         @endfor{{$avg}}/5
+                        @if ($product->stock==0)
+                        <small class="badge badge-danger" style="margin-left: 30px">Out of stock</small>
+                        @else
+                        <small class="badge badge-success" style="margin-left: 30px">Available</small>
+                        @endif
                         
                         <p>{!! $product->detail !!}</p>
                         
