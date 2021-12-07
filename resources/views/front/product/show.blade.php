@@ -123,7 +123,7 @@
                 </div>
 
             </div>
-            {{-- <div class="details_comment container  mt-5">
+            <div class="details_comment container  mt-5">
                 <strong>Reviews({{count($product->reviews)}})</strong>
                 @php
                     $reviews=App\Models\Review::where('product_id',$product->id)->paginate(20);
@@ -153,7 +153,7 @@
                 <div class=" details_comment container mt-3">
                     {{ $reviews->links() }}
                 </div>
-            </div> --}}
+            </div>
         </div>
     </div>
     <!-- PRODUCT DETAILS PART END -->
