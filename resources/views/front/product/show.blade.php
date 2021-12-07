@@ -79,7 +79,7 @@
 
                     <div class="blog_form mt-4">
                         <strong>Give Review</strong>
-                        <form action="" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('review.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="product_id" id="" value="{{ $product->id }}">
                             <div class="form-row">
