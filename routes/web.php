@@ -57,7 +57,7 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'App\Http\Contr
         Route::resource('order','OrderController');
         Route::resource('productImage','ProductImageController');
         Route::resource('gallery','GalleryImageController');
-        // Route::resource('review','ReviewController');
+        Route::resource('review','ReviewController');
 
         // Route::
       
