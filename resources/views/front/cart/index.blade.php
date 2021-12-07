@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-    Cart - Amin Dhodha House
+  <title>Cart - Amin Dhodha House</title>  
 @endsection
 @section('body')
     <!-- HERO SECTION PART START -->
