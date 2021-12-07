@@ -217,9 +217,10 @@
                     },
                     success: function(response) {
                         if (response.error) {
-                            toastr.warning('Item Out of Stock');
+                            
+                            Swal.fire("Product out of stock");
                         } else {
-                            toastr.success('Item Added to Cart');
+                            Swal.fire("Product Added To Cart"); 
                             $('#cartValue').html(response.qty);
                         }
                     }
@@ -239,7 +240,7 @@
                         if (response.error) {
                             toastr.warning('Item Out of Stock');
                         } else {
-                            toastr.success('Item Added to Cart');
+                            Swal.fire("Product Added to Cart"); 
                             $('#cartValue').html(response.qty);
                             window.location.href = "{{ route('checkout') }}";
                         }
@@ -264,7 +265,7 @@
                         if (response.error) {
                             toastr.warning('Item Out of Stock');
                         } else {
-                            toastr.success('Item Added to Cart');
+                            Swal.fire("Product Added to Cart"); 
                             $('#cartValue').html(response.qty);
                         }
                     }
