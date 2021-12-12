@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="facebook-domain-verification" content="vljgzq328nemdqd8574nzbdl3nie5b" />
 	 @yield('title')
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
